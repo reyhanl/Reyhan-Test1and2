@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import FirebaseRemoteConfig
+import FirebaseCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var windowScene: UIWindowScene?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.windowScene = windowScene
         do{
             let _ = try UserManager.shared.fetchUser()
         }catch{
@@ -25,11 +29,67 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
+        FirebaseApp.configure()
+        setupRemoteConfig()
+        
+        
+    }
+    
+    private func setupRemoteConfig() {
+        // Interval 1 day if prod. Otherwise 0.
+        let prod = false
+        let interval: TimeInterval = prod ? (60 * 60 * 24 * 1) : 0
+        
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = interval
+        
+        let remoteConfig = RemoteConfig.remoteConfig()
+        remoteConfig.configSettings = settings
+        
+        remoteConfig.fetch(withExpirationDuration: interval) { (status, error) in
+            if status == .success {
+                print("Config fetched!")
+                remoteConfig.activate { success, error in
+                    guard error == nil,
+                          let value = remoteConfig.configValue(forKey: RemoteConfigModel.CodingKeys.key.rawValue).stringValue else{
+                        print(error?.localizedDescription)
+                        return
+                    }
+                    self.addToken(token: value)
+                    DispatchQueue.main.async {
+                        self.presentMainVC()
+                    }
+                }
+            } else {
+                print("Config not fetched")
+                print("Error: \(error?.localizedDescription ?? "No error available.")")
+            }
+        }
+    }
+    
+    func presentMainVC(){
+        guard let windowScene = windowScene else{return}
         let vc = HomeRouter.makeComponent()
-        let navigationController = UINavigationController(rootViewController: vc)
+        let navigationController = CustomNavigationController(rootViewController: vc)
+        let homeTabBarItem = UITabBarItem(title: "QR", image: UIImage.init(systemName: "qrcode"), selectedImage: UIImage.init(systemName: "qrcode"))
+        vc.tabBarItem = homeTabBarItem
+        
+        let promoVC = PromoRouter.makeComponent()
+        let promoNavigationController = CustomNavigationController(rootViewController: promoVC)
+        let promoTabBarItem = UITabBarItem(title: "Promos", image: UIImage.init(systemName: "ticket"), selectedImage: UIImage.init(systemName: "ticket.fill"))
+        promoVC.tabBarItem = promoTabBarItem
+        
+        let tabBar = UITabBarController()
+        tabBar.addChild(navigationController)
+        tabBar.addChild(promoNavigationController)
+        
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navigationController
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
+    }
+    
+    func addToken(token: String){
+        UserDefaults.standard.setValue(token, forKey: tokenKey)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -66,3 +126,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+let tokenKey = "token"

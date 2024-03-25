@@ -7,7 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5CE5FD0396149440FA3154 /* Pods_Test_Reyhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */; };
+		E03893F60EDE69691B86104D /* Pods_Test_ReyhanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */; };
+		FB69658CA9AB1804EE1A0382 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */; };
 		FC4F70E72BB1AF5800A60D65 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */; };
+		FC4F70EA2BB1BCB100A60D65 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */; };
+		FC4F70EC2BB1C57C00A60D65 /* PromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */; };
+		FC4F70EE2BB1C8FE00A60D65 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70ED2BB1C8FE00A60D65 /* Promo.swift */; };
+		FC4F70F02BB1C97800A60D65 /* PromoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70EF2BB1C97800A60D65 /* PromoProtocol.swift */; };
+		FC4F70F22BB1CA0C00A60D65 /* PromoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70F12BB1CA0C00A60D65 /* PromoRouter.swift */; };
+		FC4F70F42BB1CA6200A60D65 /* PromoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70F32BB1CA6200A60D65 /* PromoInteractor.swift */; };
+		FC4F70F62BB1CB2400A60D65 /* PromoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70F52BB1CB2400A60D65 /* PromoPresenter.swift */; };
+		FC4F70F82BB1CBE500A60D65 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70F72BB1CBE500A60D65 /* Request.swift */; };
+		FC4F70FA2BB1CBF400A60D65 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70F92BB1CBF400A60D65 /* Operation.swift */; };
+		FC4F70FC2BB1CC0600A60D65 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70FB2BB1CC0600A60D65 /* Environment.swift */; };
+		FC4F70FE2BB1CC2500A60D65 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70FD2BB1CC2500A60D65 /* Dispatcher.swift */; };
+		FC4F71002BB1CC4300A60D65 /* PromoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70FF2BB1CC4300A60D65 /* PromoRequest.swift */; };
+		FC4F71022BB1CCAE00A60D65 /* GetPromoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71012BB1CCAE00A60D65 /* GetPromoOperation.swift */; };
+		FC4F71042BB1CCFF00A60D65 /* PromoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71032BB1CCFF00A60D65 /* PromoResponseModel.swift */; };
+		FC4F71062BB1CE2E00A60D65 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71052BB1CE2E00A60D65 /* URLManager.swift */; };
 		FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DB2BB1182C00BED451 /* AppDelegate.swift */; };
 		FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */; };
 		FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DF2BB1182C00BED451 /* HomeViewController.swift */; };
@@ -44,6 +62,11 @@
 		FCC34A432BB16BB500BED451 /* TransactionModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A422BB16BB500BED451 /* TransactionModalVC.swift */; };
 		FCC34A452BB17CE400BED451 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A442BB17CE400BED451 /* UIColor+Extension.swift */; };
 		FCC34A4B2BB1A0BB00BED451 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A4A2BB1A0BB00BED451 /* UIImageView+Extension.swift */; };
+		FCCB1F492BB1D20900BA3D97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCB1F482BB1D20900BA3D97 /* GoogleService-Info.plist */; };
+		FCCB1F4B2BB1D23B00BA3D97 /* RemoteConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F4A2BB1D23B00BA3D97 /* RemoteConfigModel.swift */; };
+		FCCB1F4D2BB1E68A00BA3D97 /* PromoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F4C2BB1E68A00BA3D97 /* PromoDetailViewController.swift */; };
+		FCCB1F4F2BB1E89100BA3D97 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F4E2BB1E89100BA3D97 /* CustomNavigationController.swift */; };
+		FCCB1F532BB1EC0200BA3D97 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F522BB1EC0200BA3D97 /* GradientView.swift */; };
 		FCDE61172BB1AB3200078E02 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE61162BB1AB3200078E02 /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +88,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.debug.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.debug.xcconfig"; sourceTree = "<group>"; };
+		6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.release.xcconfig"; sourceTree = "<group>"; };
+		84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan_Test_ReyhanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.release.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_ReyhanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
+		FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
+		FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC4F70ED2BB1C8FE00A60D65 /* Promo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promo.swift; sourceTree = "<group>"; };
+		FC4F70EF2BB1C97800A60D65 /* PromoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoProtocol.swift; sourceTree = "<group>"; };
+		FC4F70F12BB1CA0C00A60D65 /* PromoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoRouter.swift; sourceTree = "<group>"; };
+		FC4F70F32BB1CA6200A60D65 /* PromoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoInteractor.swift; sourceTree = "<group>"; };
+		FC4F70F52BB1CB2400A60D65 /* PromoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoPresenter.swift; sourceTree = "<group>"; };
+		FC4F70F72BB1CBE500A60D65 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FC4F70F92BB1CBF400A60D65 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		FC4F70FB2BB1CC0600A60D65 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		FC4F70FD2BB1CC2500A60D65 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		FC4F70FF2BB1CC4300A60D65 /* PromoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoRequest.swift; sourceTree = "<group>"; };
+		FC4F71012BB1CCAE00A60D65 /* GetPromoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPromoOperation.swift; sourceTree = "<group>"; };
+		FC4F71032BB1CCFF00A60D65 /* PromoResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoResponseModel.swift; sourceTree = "<group>"; };
+		FC4F71052BB1CE2E00A60D65 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		FCC349D82BB1182C00BED451 /* Test-Reyhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Reyhan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC349DB2BB1182C00BED451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +153,11 @@
 		FCC34A422BB16BB500BED451 /* TransactionModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModalVC.swift; sourceTree = "<group>"; };
 		FCC34A442BB17CE400BED451 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FCC34A4A2BB1A0BB00BED451 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FCCB1F482BB1D20900BA3D97 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCCB1F4A2BB1D23B00BA3D97 /* RemoteConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigModel.swift; sourceTree = "<group>"; };
+		FCCB1F4C2BB1E68A00BA3D97 /* PromoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDetailViewController.swift; sourceTree = "<group>"; };
+		FCCB1F4E2BB1E89100BA3D97 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		FCCB1F522BB1EC0200BA3D97 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FCDE61162BB1AB3200078E02 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5CE5FD0396149440FA3154 /* Pods_Test_Reyhan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03893F60EDE69691B86104D /* Pods_Test_ReyhanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +182,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB69658CA9AB1804EE1A0382 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E45E4712ED5DF665D6B57C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */,
+				6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */,
+				4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */,
+				0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */,
+				3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */,
+				D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E04417D7A9BA470B162A39BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */,
+				84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */,
+				EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC4F70E02BB1AE7D00A60D65 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,9 +228,12 @@
 		FC4F70E12BB1AE9800A60D65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC4F71032BB1CCFF00A60D65 /* PromoResponseModel.swift */,
+				FC4F70ED2BB1C8FE00A60D65 /* Promo.swift */,
 				FCC34A3D2BB14E5200BED451 /* User.swift */,
 				FCC34A212BB12BB400BED451 /* CustomError.swift */,
 				FCC34A232BB1350100BED451 /* Transaction.swift */,
+				FCCB1F4A2BB1D23B00BA3D97 /* RemoteConfigModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +241,8 @@
 		FC4F70E22BB1AEAB00A60D65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB1F502BB1EB2D00BA3D97 /* PromoDetail */,
+				FC4F70E82BB1BC9E00A60D65 /* Promo */,
 				FC4F70E32BB1AEB800A60D65 /* TransactionModal */,
 				FCC34A3F2BB1636000BED451 /* Home */,
 				FCC34A162BB1205500BED451 /* ScanQR */,
@@ -179,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */,
+				FCCB1F522BB1EC0200BA3D97 /* GradientView.swift */,
+				FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */,
 				FCC34A372BB13E4500BED451 /* TransactionTableViewCell.swift */,
 			);
 			path = Views;
@@ -190,10 +275,24 @@
 				FCC34A252BB135AE00BED451 /* CoreDataManager.swift */,
 				FCC34A3B2BB14DF000BED451 /* UserManager.swift */,
 				FCC34A0E2BB1186600BED451 /* TransitionManager.swift */,
+				FCCB1F4E2BB1E89100BA3D97 /* CustomNavigationController.swift */,
 				FCC34A102BB1189000BED451 /* PresentationHandler.swift */,
+				FC4F71052BB1CE2E00A60D65 /* URLManager.swift */,
 				FCC34A122BB1189C00BED451 /* DismissalHandler.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FC4F70E82BB1BC9E00A60D65 /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */,
+				FC4F70EF2BB1C97800A60D65 /* PromoProtocol.swift */,
+				FC4F70F12BB1CA0C00A60D65 /* PromoRouter.swift */,
+				FC4F70F32BB1CA6200A60D65 /* PromoInteractor.swift */,
+				FC4F70F52BB1CB2400A60D65 /* PromoPresenter.swift */,
+			);
+			path = Promo;
 			sourceTree = "<group>";
 		};
 		FCC349CF2BB1182C00BED451 = {
@@ -203,6 +302,8 @@
 				FCC349F42BB1182E00BED451 /* Test-ReyhanTests */,
 				FCC349FE2BB1182E00BED451 /* Test-ReyhanUITests */,
 				FCC349D92BB1182C00BED451 /* Products */,
+				0E45E4712ED5DF665D6B57C3 /* Pods */,
+				E04417D7A9BA470B162A39BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +322,7 @@
 			children = (
 				FCC349DB2BB1182C00BED451 /* AppDelegate.swift */,
 				FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */,
+				FCCB1F512BB1EB4C00BA3D97 /* Networking */,
 				FC4F70E52BB1AEDE00A60D65 /* Helper */,
 				FC4F70E42BB1AED100A60D65 /* Views */,
 				FC4F70E22BB1AEAB00A60D65 /* Modules */,
@@ -229,6 +331,7 @@
 				FCC34A2B2BB1368B00BED451 /* DictionaryDecoder.swift */,
 				FC4F70E12BB1AE9800A60D65 /* Model */,
 				FCC349E12BB1182C00BED451 /* Main.storyboard */,
+				FCCB1F482BB1D20900BA3D97 /* GoogleService-Info.plist */,
 				FCC349E72BB1182E00BED451 /* Assets.xcassets */,
 				FCC349E92BB1182E00BED451 /* LaunchScreen.storyboard */,
 				FCC349EC2BB1182E00BED451 /* Info.plist */,
@@ -278,6 +381,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		FCCB1F502BB1EB2D00BA3D97 /* PromoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB1F4C2BB1E68A00BA3D97 /* PromoDetailViewController.swift */,
+			);
+			path = PromoDetail;
+			sourceTree = "<group>";
+		};
+		FCCB1F512BB1EB4C00BA3D97 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC4F70F72BB1CBE500A60D65 /* Request.swift */,
+				FC4F70FF2BB1CC4300A60D65 /* PromoRequest.swift */,
+				FC4F71012BB1CCAE00A60D65 /* GetPromoOperation.swift */,
+				FC4F70F92BB1CBF400A60D65 /* Operation.swift */,
+				FC4F70FB2BB1CC0600A60D65 /* Environment.swift */,
+				FC4F70FD2BB1CC2500A60D65 /* Dispatcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,9 +409,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A052BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-Reyhan" */;
 			buildPhases = (
+				E04950AF6C04E2CB70FDC4EC /* [CP] Check Pods Manifest.lock */,
 				FCC349D42BB1182C00BED451 /* Sources */,
 				FCC349D52BB1182C00BED451 /* Frameworks */,
 				FCC349D62BB1182C00BED451 /* Resources */,
+				C89FF19D026FC910CBBEAA33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +428,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A082BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanTests" */;
 			buildPhases = (
+				B52D3DF4FFB2ECA3C7B2A72B /* [CP] Check Pods Manifest.lock */,
 				FCC349ED2BB1182E00BED451 /* Sources */,
 				FCC349EE2BB1182E00BED451 /* Frameworks */,
 				FCC349EF2BB1182E00BED451 /* Resources */,
@@ -320,9 +447,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A0B2BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanUITests" */;
 			buildPhases = (
+				BD6E90084ED031AC4987D92B /* [CP] Check Pods Manifest.lock */,
 				FCC349F72BB1182E00BED451 /* Sources */,
 				FCC349F82BB1182E00BED451 /* Frameworks */,
 				FCC349F92BB1182E00BED451 /* Resources */,
+				04959F9493852DDF07A23DD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCB1F492BB1D20900BA3D97 /* GoogleService-Info.plist in Resources */,
 				FCC349EB2BB1182E00BED451 /* LaunchScreen.storyboard in Resources */,
 				FCC349E82BB1182E00BED451 /* Assets.xcassets in Resources */,
 				FCC349E32BB1182C00BED451 /* Main.storyboard in Resources */,
@@ -404,39 +534,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04959F9493852DDF07A23DD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B52D3DF4FFB2ECA3C7B2A72B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-ReyhanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD6E90084ED031AC4987D92B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-Reyhan-Test-ReyhanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89FF19D026FC910CBBEAA33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E04950AF6C04E2CB70FDC4EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-Reyhan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FCC349D42BB1182C00BED451 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FCC34A322BB1376000BED451 /* HomeProtocol.swift in Sources */,
+				FC4F70EE2BB1C8FE00A60D65 /* Promo.swift in Sources */,
 				FCC34A1C2BB1209600BED451 /* ScanQRInteractor.swift in Sources */,
+				FC4F70EA2BB1BCB100A60D65 /* PromoViewController.swift in Sources */,
 				FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */,
+				FCCB1F532BB1EC0200BA3D97 /* GradientView.swift in Sources */,
 				FCC34A0F2BB1186600BED451 /* TransitionManager.swift in Sources */,
+				FCCB1F4D2BB1E68A00BA3D97 /* PromoDetailViewController.swift in Sources */,
 				FCC34A2E2BB1371200BED451 /* HomePresenter.swift in Sources */,
+				FC4F70FE2BB1CC2500A60D65 /* Dispatcher.swift in Sources */,
+				FC4F70F62BB1CB2400A60D65 /* PromoPresenter.swift in Sources */,
+				FC4F70FA2BB1CBF400A60D65 /* Operation.swift in Sources */,
 				FCC34A182BB1207800BED451 /* ScanQRProtocol.swift in Sources */,
 				FCC34A112BB1189000BED451 /* PresentationHandler.swift in Sources */,
 				FCC34A302BB1375400BED451 /* HomeInteractor.swift in Sources */,
 				FCC34A2A2BB1367000BED451 /* DictionaryEncoder.swift in Sources */,
 				FCC34A452BB17CE400BED451 /* UIColor+Extension.swift in Sources */,
+				FCCB1F4F2BB1E89100BA3D97 /* CustomNavigationController.swift in Sources */,
 				FCC34A132BB1189C00BED451 /* DismissalHandler.swift in Sources */,
+				FC4F71062BB1CE2E00A60D65 /* URLManager.swift in Sources */,
+				FC4F70F02BB1C97800A60D65 /* PromoProtocol.swift in Sources */,
 				FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */,
 				FCC34A3A2BB141B800BED451 /* Date+Extension.swift in Sources */,
+				FC4F70F82BB1CBE500A60D65 /* Request.swift in Sources */,
+				FC4F70EC2BB1C57C00A60D65 /* PromoCollectionViewCell.swift in Sources */,
 				FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */,
 				FCC34A362BB13CF800BED451 /* HomeRouter.swift in Sources */,
 				FCC34A152BB118DF00BED451 /* ScanQRViewController.swift in Sources */,
+				FC4F71042BB1CCFF00A60D65 /* PromoResponseModel.swift in Sources */,
 				FCC34A432BB16BB500BED451 /* TransactionModalVC.swift in Sources */,
 				FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */,
 				FCC34A382BB13E4500BED451 /* TransactionTableViewCell.swift in Sources */,
+				FC4F71002BB1CC4300A60D65 /* PromoRequest.swift in Sources */,
 				FCC34A3C2BB14DF000BED451 /* UserManager.swift in Sources */,
 				FCDE61172BB1AB3200078E02 /* Double+Extension.swift in Sources */,
 				FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */,
 				FCC34A3E2BB14E5200BED451 /* User.swift in Sources */,
+				FC4F71022BB1CCAE00A60D65 /* GetPromoOperation.swift in Sources */,
 				FCC349E62BB1182C00BED451 /* Test_Reyhan.xcdatamodeld in Sources */,
+				FC4F70FC2BB1CC0600A60D65 /* Environment.swift in Sources */,
+				FCCB1F4B2BB1D23B00BA3D97 /* RemoteConfigModel.swift in Sources */,
+				FC4F70F42BB1CA6200A60D65 /* PromoInteractor.swift in Sources */,
 				FCC34A1A2BB1208F00BED451 /* ScanQRPresenter.swift in Sources */,
 				FCC34A4B2BB1A0BB00BED451 /* UIImageView+Extension.swift in Sources */,
 				FCC34A2C2BB1368B00BED451 /* DictionaryDecoder.swift in Sources */,
 				FCC34A282BB1365700BED451 /* NSManagedObject+Extension.swift in Sources */,
+				FC4F70F22BB1CA0C00A60D65 /* PromoRouter.swift in Sources */,
 				FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */,
 				FC4F70E72BB1AF5800A60D65 /* NoDataTableViewCell.swift in Sources */,
 				FCC34A262BB135AE00BED451 /* CoreDataManager.swift in Sources */,
@@ -617,14 +869,17 @@
 		};
 		FCC34A062BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test-Reyhan/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = Something;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -634,7 +889,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Test-Reyhan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reyhan-test.bni";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -644,14 +899,17 @@
 		};
 		FCC34A072BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Test-Reyhan/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = Something;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -661,7 +919,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "test.Test-Reyhan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reyhan-test.bni";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -671,6 +929,7 @@
 		};
 		FCC34A092BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,6 +950,7 @@
 		};
 		FCC34A0A2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -711,6 +971,7 @@
 		};
 		FCC34A0C2BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -729,6 +990,7 @@
 		};
 		FCC34A0D2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

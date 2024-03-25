@@ -36,6 +36,37 @@ class TransitioningManager: NSObject, UIViewControllerTransitioningDelegate{
     }
 }
 
+extension TransitioningManager: UINavigationControllerDelegate{
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        // Check the operation to determine if it's a push or pop transition
+        if operation == .push {
+            if let transitionType = presentationTransitionType{
+                return PresentationHandler(presentationTransitionType: transitionType)
+            }else{
+                return nil
+            }
+        } else if operation == .pop {
+            if let dismissTransitionType = dismissalTransitionType{
+                return DismissalHandler(dismissTransitionType: dismissTransitionType)
+            }else{
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if let vc = viewController as? CustomTransitionEnabledVC{
+            navigationController.delegate = vc.customTransitionDelegate
+        }else{
+            navigationController.delegate = nil
+        }
+        print("navigation controller \(navigationController.viewControllers.count)")
+        navigationController.tabBarController?.tabBar.isHidden = navigationController.viewControllers.count > 1
+        navigationController.tabBarController?.tabBar.isTranslucent = navigationController.viewControllers.count > 1
+    }
+}
+
 
 class PresentationController: UIPresentationController {
     
