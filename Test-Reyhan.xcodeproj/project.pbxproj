@@ -21,6 +21,12 @@
 		FCC34A112BB1189000BED451 /* PresentationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A102BB1189000BED451 /* PresentationHandler.swift */; };
 		FCC34A132BB1189C00BED451 /* DismissalHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A122BB1189C00BED451 /* DismissalHandler.swift */; };
 		FCC34A152BB118DF00BED451 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A142BB118DF00BED451 /* ScanQRViewController.swift */; };
+		FCC34A182BB1207800BED451 /* ScanQRProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A172BB1207800BED451 /* ScanQRProtocol.swift */; };
+		FCC34A1A2BB1208F00BED451 /* ScanQRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A192BB1208F00BED451 /* ScanQRPresenter.swift */; };
+		FCC34A1C2BB1209600BED451 /* ScanQRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1B2BB1209600BED451 /* ScanQRInteractor.swift */; };
+		FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */; };
+		FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */; };
+		FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A212BB12BB400BED451 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		FCC34A102BB1189000BED451 /* PresentationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationHandler.swift; sourceTree = "<group>"; };
 		FCC34A122BB1189C00BED451 /* DismissalHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissalHandler.swift; sourceTree = "<group>"; };
 		FCC34A142BB118DF00BED451 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		FCC34A172BB1207800BED451 /* ScanQRProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRProtocol.swift; sourceTree = "<group>"; };
+		FCC34A192BB1208F00BED451 /* ScanQRPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRPresenter.swift; sourceTree = "<group>"; };
+		FCC34A1B2BB1209600BED451 /* ScanQRInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRInteractor.swift; sourceTree = "<group>"; };
+		FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRRouter.swift; sourceTree = "<group>"; };
+		FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		FCC34A212BB12BB400BED451 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +124,9 @@
 				FCC349DB2BB1182C00BED451 /* AppDelegate.swift */,
 				FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */,
 				FCC349DF2BB1182C00BED451 /* ViewController.swift */,
-				FCC34A142BB118DF00BED451 /* ScanQRViewController.swift */,
+				FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */,
+				FCC34A212BB12BB400BED451 /* CustomError.swift */,
+				FCC34A162BB1205500BED451 /* ScanQR */,
 				FCC34A0E2BB1186600BED451 /* TransitionManager.swift */,
 				FCC34A102BB1189000BED451 /* PresentationHandler.swift */,
 				FCC34A122BB1189C00BED451 /* DismissalHandler.swift */,
@@ -140,6 +154,18 @@
 				FCC34A012BB1182E00BED451 /* Test_ReyhanUITestsLaunchTests.swift */,
 			);
 			path = "Test-ReyhanUITests";
+			sourceTree = "<group>";
+		};
+		FCC34A162BB1205500BED451 /* ScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				FCC34A142BB118DF00BED451 /* ScanQRViewController.swift */,
+				FCC34A172BB1207800BED451 /* ScanQRProtocol.swift */,
+				FCC34A192BB1208F00BED451 /* ScanQRPresenter.swift */,
+				FCC34A1B2BB1209600BED451 /* ScanQRInteractor.swift */,
+				FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */,
+			);
+			path = ScanQR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,13 +299,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC34A1C2BB1209600BED451 /* ScanQRInteractor.swift in Sources */,
 				FCC349E02BB1182C00BED451 /* ViewController.swift in Sources */,
 				FCC34A0F2BB1186600BED451 /* TransitionManager.swift in Sources */,
+				FCC34A182BB1207800BED451 /* ScanQRProtocol.swift in Sources */,
 				FCC34A112BB1189000BED451 /* PresentationHandler.swift in Sources */,
 				FCC34A132BB1189C00BED451 /* DismissalHandler.swift in Sources */,
+				FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */,
+				FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */,
 				FCC34A152BB118DF00BED451 /* ScanQRViewController.swift in Sources */,
+				FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */,
 				FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */,
 				FCC349E62BB1182C00BED451 /* Test_Reyhan.xcdatamodeld in Sources */,
+				FCC34A1A2BB1208F00BED451 /* ScanQRPresenter.swift in Sources */,
 				FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,7 +499,6 @@
 				INFOPLIST_FILE = "Test-Reyhan/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,7 +526,6 @@
 				INFOPLIST_FILE = "Test-Reyhan/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

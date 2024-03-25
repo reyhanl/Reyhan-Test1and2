@@ -15,21 +15,34 @@ class ViewController: UIViewController, CustomTransitionEnabledVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         addPanGestureRecognizer()
+        addScanQRButton()
         // Do any additional setup after loading the view.
     }
     
     func addPanGestureRecognizer(){
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handleTransition(_:)))
         
+        view.backgroundColor = .systemBackground
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(panGesture)
     }
     
-    func presentScanQRVC(){
-        let vc = ScanQRViewController()
-        interactionController = UIPercentDrivenInteractiveTransition()
+    func addScanQRButton(){
+        navigationItem.leftBarButtonItem = .init(image: .init(systemName: "qrcode.viewfinder"), style: .done, target: self, action: #selector(presentQRVC))
+    }
+    
+    @objc func presentQRVC(){
+        presentScanQRVC(with: false)
+    }
+    
+    func presentScanQRVC(with interaction: Bool){
+        let vc = ScanQRRouter.makeComponent(qrCodeHandler: self)
+        if interaction{
+            interactionController = UIPercentDrivenInteractiveTransition()
+        }else{
+            interactionController = nil
+        }
         vc.customTransitionDelegate.interactionController = interactionController
         vc.transitioningDelegate = vc.customTransitionDelegate
         vc.customTransitionDelegate.presentationTransitionType = .swipeRight
@@ -45,7 +58,7 @@ class ViewController: UIViewController, CustomTransitionEnabledVC {
         
         switch gestureRecognizer.state {
         case .began:
-            presentScanQRVC()
+            presentScanQRVC(with: true)
         case .changed:
             interactionController?.update(percentageInDecimal)
         case .ended:
@@ -54,9 +67,16 @@ class ViewController: UIViewController, CustomTransitionEnabledVC {
             }else{
                 interactionController?.cancel()
             }
+            interactionController = nil
         default:
             break
         }
     }
 }
 
+extension ViewController: ScanQRDelegate{
+    func successfullyScanQR(transaction: Transaction) {
+        dismiss(animated: true)
+//        presenter.userDidTransaction(content)
+    }
+}
