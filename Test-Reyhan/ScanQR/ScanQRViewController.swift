@@ -15,9 +15,11 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
     var customTransitionDelegate: TransitioningManager = TransitioningManager()
     let session = AVCaptureSession()
     var delegate: ScanQRDelegate?
+    var shouldStopScanning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .init(red: 20/255, green: 20/255, blue: 20/255, alpha: 1)
         addPanGestureRecognizer()
         setupCamera()
     }
@@ -67,7 +69,11 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
     
     func presentErrorAlert(title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        alertController.addAction(.init(title: "OK", style: .destructive))
+        let action = UIAlertAction(title: "OK", style: .destructive) { [weak self] alert in
+            self?.shouldStopScanning = false
+            self?.session.startRunning()
+        }
+        alertController.addAction(action)
         self.present(alertController, animated: true)
     }
     
@@ -139,6 +145,9 @@ extension ScanQRViewController: AVCaptureMetadataOutputObjectsDelegate {
         guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
                   metadataObject.type == .qr,
                   let stringValue = metadataObject.stringValue else { return }
+        guard !shouldStopScanning else{return}
+        session.stopRunning()
+        shouldStopScanning = true
         DispatchQueue.main.async {
             self.presenter?.userDidScanQR(qrString: stringValue)
         }
@@ -147,13 +156,6 @@ extension ScanQRViewController: AVCaptureMetadataOutputObjectsDelegate {
 
 enum ScanQRSuccessType{
     case decodeQR(Transaction)
-}
-
-struct Transaction{
-    var bank: String
-    var transactionID: String
-    var merchant: String
-    var transactionTotal: Double
 }
 
 protocol ScanQRDelegate{
