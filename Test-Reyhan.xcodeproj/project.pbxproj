@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DB2BB1182C00BED451 /* AppDelegate.swift */; };
 		FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */; };
-		FCC349E02BB1182C00BED451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DF2BB1182C00BED451 /* ViewController.swift */; };
+		FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DF2BB1182C00BED451 /* HomeViewController.swift */; };
 		FCC349E32BB1182C00BED451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC349E12BB1182C00BED451 /* Main.storyboard */; };
 		FCC349E62BB1182C00BED451 /* Test_Reyhan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC349E42BB1182C00BED451 /* Test_Reyhan.xcdatamodeld */; };
 		FCC349E82BB1182E00BED451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC349E72BB1182E00BED451 /* Assets.xcassets */; };
@@ -27,6 +27,20 @@
 		FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */; };
 		FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */; };
 		FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A212BB12BB400BED451 /* CustomError.swift */; };
+		FCC34A242BB1350100BED451 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A232BB1350100BED451 /* Transaction.swift */; };
+		FCC34A262BB135AE00BED451 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A252BB135AE00BED451 /* CoreDataManager.swift */; };
+		FCC34A282BB1365700BED451 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A272BB1365700BED451 /* NSManagedObject+Extension.swift */; };
+		FCC34A2A2BB1367000BED451 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A292BB1367000BED451 /* DictionaryEncoder.swift */; };
+		FCC34A2C2BB1368B00BED451 /* DictionaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A2B2BB1368B00BED451 /* DictionaryDecoder.swift */; };
+		FCC34A2E2BB1371200BED451 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A2D2BB1371200BED451 /* HomePresenter.swift */; };
+		FCC34A302BB1375400BED451 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A2F2BB1375400BED451 /* HomeInteractor.swift */; };
+		FCC34A322BB1376000BED451 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A312BB1376000BED451 /* HomeProtocol.swift */; };
+		FCC34A342BB13A9400BED451 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A332BB13A9400BED451 /* TransactionViewController.swift */; };
+		FCC34A362BB13CF800BED451 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A352BB13CF800BED451 /* HomeRouter.swift */; };
+		FCC34A382BB13E4500BED451 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A372BB13E4500BED451 /* TransactionTableViewCell.swift */; };
+		FCC34A3A2BB141B800BED451 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A392BB141B800BED451 /* Date+Extension.swift */; };
+		FCC34A3C2BB14DF000BED451 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A3B2BB14DF000BED451 /* UserManager.swift */; };
+		FCC34A3E2BB14E5200BED451 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A3D2BB14E5200BED451 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +64,7 @@
 		FCC349D82BB1182C00BED451 /* Test-Reyhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Reyhan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC349DB2BB1182C00BED451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCC349DF2BB1182C00BED451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCC349DF2BB1182C00BED451 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCC349E22BB1182C00BED451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCC349E52BB1182C00BED451 /* Test_Reyhan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test_Reyhan.xcdatamodel; sourceTree = "<group>"; };
 		FCC349E72BB1182E00BED451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +85,20 @@
 		FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRRouter.swift; sourceTree = "<group>"; };
 		FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		FCC34A212BB12BB400BED451 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		FCC34A232BB1350100BED451 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		FCC34A252BB135AE00BED451 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FCC34A272BB1365700BED451 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
+		FCC34A292BB1367000BED451 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		FCC34A2B2BB1368B00BED451 /* DictionaryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDecoder.swift; sourceTree = "<group>"; };
+		FCC34A2D2BB1371200BED451 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FCC34A2F2BB1375400BED451 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FCC34A312BB1376000BED451 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		FCC34A332BB13A9400BED451 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		FCC34A352BB13CF800BED451 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FCC34A372BB13E4500BED451 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		FCC34A392BB141B800BED451 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FCC34A3B2BB14DF000BED451 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		FCC34A3D2BB14E5200BED451 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +151,19 @@
 			children = (
 				FCC349DB2BB1182C00BED451 /* AppDelegate.swift */,
 				FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */,
-				FCC349DF2BB1182C00BED451 /* ViewController.swift */,
+				FCC34A372BB13E4500BED451 /* TransactionTableViewCell.swift */,
+				FCC34A3B2BB14DF000BED451 /* UserManager.swift */,
+				FCC34A3D2BB14E5200BED451 /* User.swift */,
+				FCC34A332BB13A9400BED451 /* TransactionViewController.swift */,
+				FCC34A3F2BB1636000BED451 /* Home */,
 				FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */,
+				FCC34A252BB135AE00BED451 /* CoreDataManager.swift */,
+				FCC34A272BB1365700BED451 /* NSManagedObject+Extension.swift */,
+				FCC34A292BB1367000BED451 /* DictionaryEncoder.swift */,
+				FCC34A2B2BB1368B00BED451 /* DictionaryDecoder.swift */,
 				FCC34A212BB12BB400BED451 /* CustomError.swift */,
+				FCC34A232BB1350100BED451 /* Transaction.swift */,
+				FCC34A392BB141B800BED451 /* Date+Extension.swift */,
 				FCC34A162BB1205500BED451 /* ScanQR */,
 				FCC34A0E2BB1186600BED451 /* TransitionManager.swift */,
 				FCC34A102BB1189000BED451 /* PresentationHandler.swift */,
@@ -166,6 +204,18 @@
 				FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */,
 			);
 			path = ScanQR;
+			sourceTree = "<group>";
+		};
+		FCC34A3F2BB1636000BED451 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FCC34A2D2BB1371200BED451 /* HomePresenter.swift */,
+				FCC34A2F2BB1375400BED451 /* HomeInteractor.swift */,
+				FCC349DF2BB1182C00BED451 /* HomeViewController.swift */,
+				FCC34A312BB1376000BED451 /* HomeProtocol.swift */,
+				FCC34A352BB13CF800BED451 /* HomeRouter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,20 +349,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC34A322BB1376000BED451 /* HomeProtocol.swift in Sources */,
 				FCC34A1C2BB1209600BED451 /* ScanQRInteractor.swift in Sources */,
-				FCC349E02BB1182C00BED451 /* ViewController.swift in Sources */,
+				FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */,
 				FCC34A0F2BB1186600BED451 /* TransitionManager.swift in Sources */,
+				FCC34A2E2BB1371200BED451 /* HomePresenter.swift in Sources */,
 				FCC34A182BB1207800BED451 /* ScanQRProtocol.swift in Sources */,
 				FCC34A112BB1189000BED451 /* PresentationHandler.swift in Sources */,
+				FCC34A302BB1375400BED451 /* HomeInteractor.swift in Sources */,
+				FCC34A2A2BB1367000BED451 /* DictionaryEncoder.swift in Sources */,
 				FCC34A132BB1189C00BED451 /* DismissalHandler.swift in Sources */,
 				FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */,
+				FCC34A3A2BB141B800BED451 /* Date+Extension.swift in Sources */,
+				FCC34A342BB13A9400BED451 /* TransactionViewController.swift in Sources */,
 				FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */,
+				FCC34A362BB13CF800BED451 /* HomeRouter.swift in Sources */,
 				FCC34A152BB118DF00BED451 /* ScanQRViewController.swift in Sources */,
 				FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */,
+				FCC34A382BB13E4500BED451 /* TransactionTableViewCell.swift in Sources */,
+				FCC34A3C2BB14DF000BED451 /* UserManager.swift in Sources */,
 				FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */,
+				FCC34A3E2BB14E5200BED451 /* User.swift in Sources */,
 				FCC349E62BB1182C00BED451 /* Test_Reyhan.xcdatamodeld in Sources */,
 				FCC34A1A2BB1208F00BED451 /* ScanQRPresenter.swift in Sources */,
+				FCC34A2C2BB1368B00BED451 /* DictionaryDecoder.swift in Sources */,
+				FCC34A282BB1365700BED451 /* NSManagedObject+Extension.swift in Sources */,
 				FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */,
+				FCC34A262BB135AE00BED451 /* CoreDataManager.swift in Sources */,
+				FCC34A242BB1350100BED451 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

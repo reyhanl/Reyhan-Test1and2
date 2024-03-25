@@ -21,7 +21,7 @@ class ScanQRInteractor: ScanQRPresenterToInteractorProtocol{
             presenter?.result(result: .failure(CustomError.unableToScanQRCode))
             return
         }
-        let content = Transaction.init(bank: bank, transactionID: transactionID, merchant: merchant, transactionTotal: transactionDouble)
+        let content = Transaction.init(bank: bank, transactionID: transactionID, merchant: merchant, transactionTotal: transactionDouble, date: Date().toString())
         presenter?.result(result: .success(.decodeQR(content)))
     }
 }

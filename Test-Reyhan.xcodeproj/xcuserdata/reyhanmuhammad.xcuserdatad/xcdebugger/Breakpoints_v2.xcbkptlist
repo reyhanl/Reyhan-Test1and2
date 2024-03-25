@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C97C9F5F-E048-4DE3-AF09-851A737AC703"
-            shouldBeEnabled = "Yes"
+            uuid = "60655FD6-5465-4B49-AE66-D805BF1FA404"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Test-Reyhan/ScanQR/ScanQRViewController.swift"
+            filePath = "Test-Reyhan/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "handleTransition(_:)"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "successfullyScanQR(transaction:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
