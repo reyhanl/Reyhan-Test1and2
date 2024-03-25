@@ -37,4 +37,17 @@ class HomeRouter: HomePresenterToRouterProtocol{
         vc.modalPresentationStyle = .custom
         from.present(vc, animated: true)
     }
+    
+    func goToTransactionVC(from: HomeViewController, transaction: Transaction, user: User) {
+        let vc = TransactionModalVC()
+        vc.customTransitionDelegate.presentationTransitionType = .swipeUp
+        vc.customTransitionDelegate.dismissalTransitionType = .swipeDown
+        vc.transitioningDelegate = vc.customTransitionDelegate
+        vc.modalPresentationStyle = .custom
+        from.transitioningDelegate = vc.customTransitionDelegate
+        vc.setupUI(transaction: transaction, user: user)
+        vc.delegate = from
+        vc.interactionController = nil
+        from.present(vc, animated: true)
+    }
 }

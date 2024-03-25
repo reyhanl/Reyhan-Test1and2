@@ -24,8 +24,46 @@ class PresentationHandler: NSObject, UIViewControllerAnimatedTransitioning{
         switch presentationTransitionType {
         case .swipeRight:
             handleSwipeRight(using: transitionContext)
+        case .swipeUp:
+            handleSwipeUp(using: transitionContext)
         case nil:
             break
+        }
+    }
+    
+    func handleSwipeUp(using transitionContext: UIViewControllerContextTransitioning){
+        let fromView = transitionContext.view(forKey: .from)
+        let toView = transitionContext.view(forKey: .to)
+        
+        let containerView = transitionContext.containerView
+        
+        if let toView = toView{
+            containerView.addSubview(toView)
+        }
+        //we are setting the initial position for the ToViewController.view, we are setting it to the left of the screen
+        toView?.frame = containerView.frame
+        if let subview = toView?.subviews[safe: 1]{
+            subview.frame.origin.y += containerView.frame.height
+        }
+        toView?.subviews.first?.alpha = 0
+        
+        let duration = transitionDuration(using: transitionContext)
+        UIView.animate(withDuration: duration) {
+            if let subview = toView?.subviews[safe: 1]{
+                subview.frame.origin.y -= containerView.frame.height
+            }
+            toView?.subviews.first?.alpha = 1
+        } completion: { _ in
+            if transitionContext.transitionWasCancelled{
+                toView?.frame.origin.x = -(fromView?.frame.width ?? 0)
+                toView?.removeFromSuperview()
+                fromView?.frame.origin.x = 0
+            }else{
+                fromView?.removeFromSuperview()
+            }
+            if let subview = toView?.subviews[safe: 1]{
+            }
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }
     
@@ -61,4 +99,5 @@ class PresentationHandler: NSObject, UIViewControllerAnimatedTransitioning{
 
 enum CustomPresentationTransitionType{
     case swipeRight
+    case swipeUp
 }

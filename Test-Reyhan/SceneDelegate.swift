@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 UserManager.shared.makeNewUser()
             }
         }
+        
         let vc = HomeRouter.makeComponent()
         let navigationController = UINavigationController(rootViewController: vc)
         window = UIWindow(windowScene: windowScene)

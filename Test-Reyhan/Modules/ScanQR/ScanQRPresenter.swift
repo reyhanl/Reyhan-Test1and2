@@ -15,8 +15,6 @@ class ScanQRPresenter: ScanQRInteractorToPresenterProtocol{
     func result(result: Result<ScanQRSuccessType, Error>) {
         view?.result(result: result)
     }
-    
-    
 }
 
 extension ScanQRPresenter: ScanQRViewToPresenterProtocol{

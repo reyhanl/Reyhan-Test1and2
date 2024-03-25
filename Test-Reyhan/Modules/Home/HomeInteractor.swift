@@ -54,6 +54,7 @@ class HomeInteractor: HomePresenterToInteractorProtocol{
             var user = try UserManager.shared.fetchUser()
             user.balance += 50000
             try UserManager.shared.updateBalance(balance: user.balance)
+            print(try UserManager.shared.fetchUser().balance)
             presenter?.result(result: .success(.topUpSuccess))
         }catch{
             presenter?.result(result: .failure(error))

@@ -24,6 +24,8 @@ class DismissalHandler: NSObject, UIViewControllerAnimatedTransitioning{
         switch dismissTransitionType {
         case .swipeLeft:
             handleSwipeLeft(using: transitionContext)
+        case .swipeDown:
+            handleSwipeDown(using: transitionContext)
         case nil:
             break
         }
@@ -39,11 +41,13 @@ class DismissalHandler: NSObject, UIViewControllerAnimatedTransitioning{
         //we are setting the initial position for the ToViewController.view, we are setting it to the left of the screen
         toView.frame = fromView.frame
         toView.frame.origin.x = fromView.frame.width
+        toView.subviews.first?.alpha = 0
         
         let duration = transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration) {
             toView.frame.origin.x = 0
             fromView.frame.origin.x = -fromView.frame.width
+            toView.subviews.first?.alpha = 1
         } completion: { _ in
             if transitionContext.transitionWasCancelled{
                 toView.frame.origin.x = -fromView.frame.width
@@ -55,10 +59,30 @@ class DismissalHandler: NSObject, UIViewControllerAnimatedTransitioning{
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }
+    
+    func handleSwipeDown(using transitionContext: UIViewControllerContextTransitioning){
+        let fromView = transitionContext.view(forKey: .from)
+        let containerView = transitionContext.containerView
+                
+        let duration = transitionDuration(using: transitionContext)
+        fromView?.subviews.first?.alpha = 1
+        UIView.animate(withDuration: duration) {
+            fromView?.subviews.first?.alpha = 0
+            fromView?.subviews[safe:1]?.frame.origin.y = containerView.frame.height
+        } completion: { _ in
+            if transitionContext.transitionWasCancelled{
+                fromView?.frame.origin.y = 0
+            }else{
+                fromView?.removeFromSuperview()
+            }
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+    }
 }
 
 
 enum CustomDismissTransitionType{
     case swipeLeft
+    case swipeDown
 }
 

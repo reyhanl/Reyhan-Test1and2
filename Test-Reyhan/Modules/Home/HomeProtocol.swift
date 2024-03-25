@@ -16,6 +16,7 @@ protocol HomeViewToPresenterProtocol{
     func updateUserDetail()
     func goToQRVC(from: HomeViewController, usingInteraction: Bool)
     func topUp()
+    func goToTransactionVC(from: HomeViewController, transaction: Transaction, user: User)
 }
 
 protocol HomePresenterToViewProtocol{
@@ -43,6 +44,7 @@ protocol HomeInteractorToPresenterProtocol{
 
 protocol HomePresenterToRouterProtocol{
     func goToQRVC(from: HomeViewController, usingInteraction: Bool)
+    func goToTransactionVC(from: HomeViewController, transaction: Transaction, user: User)
 }
 
 enum HomeSuccessType{

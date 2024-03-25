@@ -15,7 +15,7 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
     var customTransitionDelegate: TransitioningManager = TransitioningManager()
     let session = AVCaptureSession()
     var delegate: ScanQRDelegate?
-    var shouldStopScanning = false
+    var shouldStopScanning = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        shouldStopScanning = false
     }
     
     deinit{
@@ -146,8 +147,9 @@ extension ScanQRViewController: AVCaptureMetadataOutputObjectsDelegate {
                   metadataObject.type == .qr,
                   let stringValue = metadataObject.stringValue else { return }
         guard !shouldStopScanning else{return}
-        session.stopRunning()
         shouldStopScanning = true
+        print("metadataOutput")
+        session.stopRunning()
         DispatchQueue.main.async {
             self.presenter?.userDidScanQR(qrString: stringValue)
         }

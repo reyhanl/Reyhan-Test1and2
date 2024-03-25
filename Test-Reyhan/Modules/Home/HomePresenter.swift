@@ -32,6 +32,7 @@ class HomePresenter: HomeInteractorToPresenterProtocol{
             view?.updateTransactions(transactions: transactions)
         case .transactionSuccess:
             interactor?.fetchListOfTransaction()
+            interactor?.fetchUserDetail()
         case .fetchUserSuccess(let user):
             view?.updateUserInfo(user: user)
         case .topUpSuccess:
@@ -59,5 +60,9 @@ extension HomePresenter: HomeViewToPresenterProtocol{
     
     func topUp() {
         interactor?.topUp()
+    }
+    
+    func goToTransactionVC(from: HomeViewController, transaction: Transaction, user: User) {
+        router?.goToTransactionVC(from: from, transaction: transaction, user: user)
     }
 }

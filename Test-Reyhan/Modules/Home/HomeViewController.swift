@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(TransactionTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(NoDataTableViewCell.self, forCellReuseIdentifier: "noDataCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,7 +32,9 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
     lazy var topUpButton: UIButton = {
        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .blue
+        button.setBackgroundImage(.init(color: .primaryButton), for: .normal)
+        button.setBackgroundImage(.init(color: .primaryButtonPressed), for: .selected)
+        button.setBackgroundImage(.init(color: .primaryButtonPressed), for: .highlighted)
         button.setTitle("Top up", for: .normal)
         button.addTarget(self, action: #selector(topup), for: .touchUpInside)
         button.layer.cornerRadius = 5
@@ -44,17 +47,18 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
     var balance: Double = 0
     var transactions: [Transaction] = []
     var firstTime: Bool = true
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addPanGestureRecognizer()
         addScanQRButton()
         addNoTransactionView()
-        addUserDetailView()
         addTableView()
         addTopUpButton()
         presenter?.updateUserDetail()
         presenter?.updateTransactions()
+        navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
     
@@ -72,7 +76,7 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: tableView, attribute: .top, relatedBy: .equal, toItem: balanceLabel, attribute: .bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: tableView, attribute: .top, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .top, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: tableView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: tableView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: tableView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
@@ -96,8 +100,8 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: topUpButton, attribute: .bottom, relatedBy: .equal, toItem: view.safeAreaLayoutGuide, attribute: .bottom, multiplier: 1, constant: -20),
             NSLayoutConstraint(item: topUpButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: topUpButton, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: 40),
-            NSLayoutConstraint(item: topUpButton, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.5, constant: 0)
+            NSLayoutConstraint(item: topUpButton, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: 50),
+            NSLayoutConstraint(item: topUpButton, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.8, constant: 0)
         ])
     }
     
@@ -126,7 +130,8 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
     }
     
     func updateUserInfo(user: User) {
-        balanceLabel.text = "IDR \(user.balance)"
+        self.user = user
+        self.navigationItem.title = user.balance.getCurrency()
     }
     
     @objc func presentQRVC(){
@@ -167,24 +172,38 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
 extension HomeViewController: ScanQRDelegate{
     func successfullyScanQR(transaction: Transaction) {
         dismiss(animated: true) { [weak self] in
-            guard let self = self else{return}
-            self.presenter?.userDidTransaction(transaction: transaction)
+            guard let self = self, let user = user else{return}
+            self.presenter?.goToTransactionVC(from: self, transaction: transaction, user: user)
         }
     }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TransactionTableViewCell
-        cell.setupCell(transaction: transactions[indexPath.row])
-        return cell
+        if transactions.count == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "noDataCell", for: indexPath) as! NoDataTableViewCell
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TransactionTableViewCell
+            cell.setupCell(transaction: transactions[indexPath.row])
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return (transactions.count == 0) ? tableView.frame.height:UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transactions.count
+        return transactions.count == 0 ? 1:transactions.count
+    }
+}
+
+extension HomeViewController: TransactionModalDelegate{
+    func purchase(transaction: Transaction){
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else{return}
+            self.presenter?.userDidTransaction(transaction: transaction)
+        }
     }
 }

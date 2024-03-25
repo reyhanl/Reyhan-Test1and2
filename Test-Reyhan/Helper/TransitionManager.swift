@@ -22,7 +22,9 @@ class TransitioningManager: NSObject, UIViewControllerTransitioningDelegate{
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return PresentationController(presentedViewController: presented, presenting: presenting)
+        let controller = PresentationController(presentedViewController: presented, presenting: presenting)
+        controller.transitionType = presentationTransitionType
+        return controller
     }
     
     func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
@@ -40,7 +42,14 @@ class PresentationController: UIPresentationController {
     var transitionType: CustomPresentationTransitionType?
     
     override var shouldRemovePresentersView: Bool {
-        return true
+        switch transitionType {
+        case .swipeRight:
+            return true
+        case .swipeUp:
+            return false
+        case nil:
+            return true
+        }
     }
 }
 
