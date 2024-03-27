@@ -48,7 +48,7 @@ class ScanQRViewController: BaseViewController, CustomTransitionEnabledVC, ScanQ
         case .notDetermined: // The user has not yet been asked for camera access.
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted {
-                    DispatchQueue.global().async { [weak self] in
+                    DispatchQueue.main.async { [weak self] in
                         self?.startSession()
                     }
                 }

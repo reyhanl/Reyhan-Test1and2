@@ -18,6 +18,36 @@
             endingLineNumber = "147"
             landmarkName = "continueCamera()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B2BBD1E-48F7-4229-85D8-4636337E746A - bc5bd2a3694bf664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Test_Reyhan.ScanQRViewController.continueCamera() -&gt; ()"
+                  moduleName = "Test-Reyhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reyhanmuhammad/Downloads/Test-Reyhan/Test-Reyhan/Modules/ScanQR/ScanQRViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147">
+               </Location>
+               <Location
+                  uuid = "4B2BBD1E-48F7-4229-85D8-4636337E746A - 9720e6eeaa8f6ed0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in Test_Reyhan.ScanQRViewController.continueCamera() -&gt; ()"
+                  moduleName = "Test-Reyhan"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/reyhanmuhammad/Downloads/Test-Reyhan/Test-Reyhan/Modules/ScanQR/ScanQRViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
