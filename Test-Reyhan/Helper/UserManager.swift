@@ -25,7 +25,7 @@ class UserManager{
         guard let data = UserDefaults.standard.value(forKey: userKey) as? Data else{
             throw CustomError.userNotFound
         }
-        var user: User = try JSONDecoder().decode(User.self, from: data)
+        let user: User = try JSONDecoder().decode(User.self, from: data)
         return user
     }
     

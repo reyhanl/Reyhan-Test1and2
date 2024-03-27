@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E5CE5FD0396149440FA3154 /* Pods_Test_Reyhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */; };
-		E03893F60EDE69691B86104D /* Pods_Test_ReyhanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */; };
-		FB69658CA9AB1804EE1A0382 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */; };
+		04D381F0E93F4FECB81E3425 /* Pods_Test_ReyhanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */; };
+		91C25700E4747FD00624FCF1 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */; };
+		A25FDE7E7FA17D335B5F8337 /* Pods_Test_Reyhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */; };
 		FC4F70E72BB1AF5800A60D65 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */; };
 		FC4F70EA2BB1BCB100A60D65 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */; };
 		FC4F70EC2BB1C57C00A60D65 /* PromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */; };
@@ -26,6 +26,16 @@
 		FC4F71022BB1CCAE00A60D65 /* GetPromoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71012BB1CCAE00A60D65 /* GetPromoOperation.swift */; };
 		FC4F71042BB1CCFF00A60D65 /* PromoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71032BB1CCFF00A60D65 /* PromoResponseModel.swift */; };
 		FC4F71062BB1CE2E00A60D65 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F71052BB1CE2E00A60D65 /* URLManager.swift */; };
+		FC5DC0822BB2FF0A00CD60FD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A252BB135AE00BED451 /* CoreDataManager.swift */; };
+		FC64CBAA2BB41CFE005579F2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBA92BB41CFE005579F2 /* BaseViewController.swift */; };
+		FC64CBAE2BB41E53005579F2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBAD2BB41E53005579F2 /* TabBarController.swift */; };
+		FC92F1CD2BB44F97000F6FE0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBA92BB41CFE005579F2 /* BaseViewController.swift */; };
+		FC92F1CE2BB44F98000F6FE0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBA92BB41CFE005579F2 /* BaseViewController.swift */; };
+		FC92F1CF2BB44F9A000F6FE0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBAD2BB41E53005579F2 /* TabBarController.swift */; };
+		FC92F1D02BB44F9B000F6FE0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64CBAD2BB41E53005579F2 /* TabBarController.swift */; };
+		FCA7F0542BB4627E00014001 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7F0532BB4627E00014001 /* SplashVC.swift */; };
+		FCA91BB02BB2F11200EF6FCC /* ScanQRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1B2BB1209600BED451 /* ScanQRInteractor.swift */; };
+		FCA91BB32BB2F18D00EF6FCC /* ScanQRProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A172BB1207800BED451 /* ScanQRProtocol.swift */; };
 		FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DB2BB1182C00BED451 /* AppDelegate.swift */; };
 		FCC349DE2BB1182C00BED451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */; };
 		FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DF2BB1182C00BED451 /* HomeViewController.swift */; };
@@ -33,7 +43,6 @@
 		FCC349E62BB1182C00BED451 /* Test_Reyhan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC349E42BB1182C00BED451 /* Test_Reyhan.xcdatamodeld */; };
 		FCC349E82BB1182E00BED451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC349E72BB1182E00BED451 /* Assets.xcassets */; };
 		FCC349EB2BB1182E00BED451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC349E92BB1182E00BED451 /* LaunchScreen.storyboard */; };
-		FCC349F62BB1182E00BED451 /* Test_ReyhanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349F52BB1182E00BED451 /* Test_ReyhanTests.swift */; };
 		FCC34A002BB1182E00BED451 /* Test_ReyhanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349FF2BB1182E00BED451 /* Test_ReyhanUITests.swift */; };
 		FCC34A022BB1182E00BED451 /* Test_ReyhanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A012BB1182E00BED451 /* Test_ReyhanUITestsLaunchTests.swift */; };
 		FCC34A0F2BB1186600BED451 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A0E2BB1186600BED451 /* TransitionManager.swift */; };
@@ -67,7 +76,41 @@
 		FCCB1F4D2BB1E68A00BA3D97 /* PromoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F4C2BB1E68A00BA3D97 /* PromoDetailViewController.swift */; };
 		FCCB1F4F2BB1E89100BA3D97 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F4E2BB1E89100BA3D97 /* CustomNavigationController.swift */; };
 		FCCB1F532BB1EC0200BA3D97 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB1F522BB1EC0200BA3D97 /* GradientView.swift */; };
+		FCD978BB2BB3012A00EE7DF8 /* CoreDataHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD978BA2BB3012A00EE7DF8 /* CoreDataHelperTest.swift */; };
+		FCD978BF2BB301D600EE7DF8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A232BB1350100BED451 /* Transaction.swift */; };
+		FCD978C12BB3020A00EE7DF8 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD978C02BB3020A00EE7DF8 /* MockDataProvider.swift */; };
+		FCD978C22BB3034100EE7DF8 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */; };
+		FCD978C32BB3035D00EE7DF8 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A212BB12BB400BED451 /* CustomError.swift */; };
+		FCD978C42BB303A500EE7DF8 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A292BB1367000BED451 /* DictionaryEncoder.swift */; };
+		FCD978C52BB303A700EE7DF8 /* DictionaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A2B2BB1368B00BED451 /* DictionaryDecoder.swift */; };
+		FCD978C62BB303B700EE7DF8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A392BB141B800BED451 /* Date+Extension.swift */; };
+		FCD978C82BB303BC00EE7DF8 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A272BB1365700BED451 /* NSManagedObject+Extension.swift */; };
+		FCD978CC2BB30F1E00EE7DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC349DB2BB1182C00BED451 /* AppDelegate.swift */; };
+		FCD978CE2BB311D100EE7DF8 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD978CD2BB3119A00EE7DF8 /* dummy.json */; };
+		FCD978CF2BB311D200EE7DF8 /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = FCD978CD2BB3119A00EE7DF8 /* dummy.json */; };
+		FCD978D12BB3215B00EE7DF8 /* TransactionModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A422BB16BB500BED451 /* TransactionModalVC.swift */; };
+		FCD978D22BB3216300EE7DF8 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A0E2BB1186600BED451 /* TransitionManager.swift */; };
+		FCD978D32BB3218900EE7DF8 /* PresentationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A102BB1189000BED451 /* PresentationHandler.swift */; };
+		FCD978D42BB321A600EE7DF8 /* DismissalHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A122BB1189C00BED451 /* DismissalHandler.swift */; };
+		FCD978D52BB321CB00EE7DF8 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A442BB17CE400BED451 /* UIColor+Extension.swift */; };
+		FCD978D62BB321CF00EE7DF8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A392BB141B800BED451 /* Date+Extension.swift */; };
+		FCD978D72BB321D300EE7DF8 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE61162BB1AB3200078E02 /* Double+Extension.swift */; };
+		FCD978D82BB321E100EE7DF8 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1F2BB128E900BED451 /* Collection+Extension.swift */; };
+		FCD978D92BB3222D00EE7DF8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A3D2BB14E5200BED451 /* User.swift */; };
+		FCD978DA2BB3223100EE7DF8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A232BB1350100BED451 /* Transaction.swift */; };
+		FCD978DC2BB3227B00EE7DF8 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A4A2BB1A0BB00BED451 /* UIImageView+Extension.swift */; };
+		FCD978DE2BB3254100EE7DF8 /* PromoMockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD978DD2BB3254100EE7DF8 /* PromoMockPresenter.swift */; };
+		FCD978DF2BB3256900EE7DF8 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD978C02BB3020A00EE7DF8 /* MockDataProvider.swift */; };
+		FCD978E02BB3258400EE7DF8 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70ED2BB1C8FE00A60D65 /* Promo.swift */; };
+		FCD978E12BB3281C00EE7DF8 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD978C02BB3020A00EE7DF8 /* MockDataProvider.swift */; };
+		FCD978E22BB3287F00EE7DF8 /* Promo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70ED2BB1C8FE00A60D65 /* Promo.swift */; };
 		FCDE61172BB1AB3200078E02 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE61162BB1AB3200078E02 /* Double+Extension.swift */; };
+		FCE5BA222BB3DB4B00B9418A /* ScanQRInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1B2BB1209600BED451 /* ScanQRInteractor.swift */; };
+		FCE5BA232BB3DB7A00B9418A /* ScanQRProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A172BB1207800BED451 /* ScanQRProtocol.swift */; };
+		FCE5BA242BB3DB7D00B9418A /* ScanQRPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A192BB1208F00BED451 /* ScanQRPresenter.swift */; };
+		FCE5BA252BB3DB8200B9418A /* ScanQRRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A1D2BB1209E00BED451 /* ScanQRRouter.swift */; };
+		FCE5BA262BB3DB8500B9418A /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A142BB118DF00BED451 /* ScanQRViewController.swift */; };
+		FCE5BA272BB3DB9A00B9418A /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC34A212BB12BB400BED451 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,15 +131,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; sourceTree = "<group>"; };
-		3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.debug.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.debug.xcconfig"; sourceTree = "<group>"; };
-		6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.release.xcconfig"; sourceTree = "<group>"; };
-		84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan_Test_ReyhanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.release.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.release.xcconfig"; sourceTree = "<group>"; };
-		EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_ReyhanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.debug.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.debug.xcconfig"; sourceTree = "<group>"; };
+		2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.release.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.release.xcconfig"; sourceTree = "<group>"; };
+		48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.release.xcconfig"; sourceTree = "<group>"; };
+		78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan_Test_ReyhanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_ReyhanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
 		FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +156,9 @@
 		FC4F71012BB1CCAE00A60D65 /* GetPromoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPromoOperation.swift; sourceTree = "<group>"; };
 		FC4F71032BB1CCFF00A60D65 /* PromoResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoResponseModel.swift; sourceTree = "<group>"; };
 		FC4F71052BB1CE2E00A60D65 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		FC64CBA92BB41CFE005579F2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FC64CBAD2BB41E53005579F2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FCA7F0532BB4627E00014001 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		FCC349D82BB1182C00BED451 /* Test-Reyhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Reyhan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC349DB2BB1182C00BED451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC349DD2BB1182C00BED451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +169,6 @@
 		FCC349EA2BB1182E00BED451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCC349EC2BB1182E00BED451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC349F12BB1182E00BED451 /* Test-ReyhanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test-ReyhanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC349F52BB1182E00BED451 /* Test_ReyhanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ReyhanTests.swift; sourceTree = "<group>"; };
 		FCC349FB2BB1182E00BED451 /* Test-ReyhanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test-ReyhanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC349FF2BB1182E00BED451 /* Test_ReyhanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ReyhanUITests.swift; sourceTree = "<group>"; };
 		FCC34A012BB1182E00BED451 /* Test_ReyhanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ReyhanUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -158,6 +203,10 @@
 		FCCB1F4C2BB1E68A00BA3D97 /* PromoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDetailViewController.swift; sourceTree = "<group>"; };
 		FCCB1F4E2BB1E89100BA3D97 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		FCCB1F522BB1EC0200BA3D97 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		FCD978BA2BB3012A00EE7DF8 /* CoreDataHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelperTest.swift; sourceTree = "<group>"; };
+		FCD978C02BB3020A00EE7DF8 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		FCD978CD2BB3119A00EE7DF8 /* dummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
+		FCD978DD2BB3254100EE7DF8 /* PromoMockPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoMockPresenter.swift; sourceTree = "<group>"; };
 		FCDE61162BB1AB3200078E02 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E5CE5FD0396149440FA3154 /* Pods_Test_Reyhan.framework in Frameworks */,
+				A25FDE7E7FA17D335B5F8337 /* Pods_Test_Reyhan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E03893F60EDE69691B86104D /* Pods_Test_ReyhanTests.framework in Frameworks */,
+				04D381F0E93F4FECB81E3425 /* Pods_Test_ReyhanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB69658CA9AB1804EE1A0382 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */,
+				91C25700E4747FD00624FCF1 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,22 +241,22 @@
 		0E45E4712ED5DF665D6B57C3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */,
-				6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */,
-				4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */,
-				0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */,
-				3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */,
-				D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */,
+				1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */,
+				7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */,
+				48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */,
+				E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */,
+				1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */,
+				2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E04417D7A9BA470B162A39BD /* Frameworks */ = {
+		6C58867FD1FAD2AF115DCBBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E84BFB7FC551D8ABD059CBF /* Pods_Test_Reyhan.framework */,
-				84519CFB81B40798979973B4 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */,
-				EB749FE06F9D178FE796E67B /* Pods_Test_ReyhanTests.framework */,
+				F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */,
+				78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */,
+				83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -246,6 +295,9 @@
 				FC4F70E32BB1AEB800A60D65 /* TransactionModal */,
 				FCC34A3F2BB1636000BED451 /* Home */,
 				FCC34A162BB1205500BED451 /* ScanQR */,
+				FC64CBA92BB41CFE005579F2 /* BaseViewController.swift */,
+				FCA7F0532BB4627E00014001 /* SplashVC.swift */,
+				FC64CBAD2BB41E53005579F2 /* TabBarController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -289,6 +341,7 @@
 				FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */,
 				FC4F70EF2BB1C97800A60D65 /* PromoProtocol.swift */,
 				FC4F70F12BB1CA0C00A60D65 /* PromoRouter.swift */,
+				FCD978DD2BB3254100EE7DF8 /* PromoMockPresenter.swift */,
 				FC4F70F32BB1CA6200A60D65 /* PromoInteractor.swift */,
 				FC4F70F52BB1CB2400A60D65 /* PromoPresenter.swift */,
 			);
@@ -303,7 +356,7 @@
 				FCC349FE2BB1182E00BED451 /* Test-ReyhanUITests */,
 				FCC349D92BB1182C00BED451 /* Products */,
 				0E45E4712ED5DF665D6B57C3 /* Pods */,
-				E04417D7A9BA470B162A39BD /* Frameworks */,
+				6C58867FD1FAD2AF115DCBBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,6 +387,7 @@
 				FCCB1F482BB1D20900BA3D97 /* GoogleService-Info.plist */,
 				FCC349E72BB1182E00BED451 /* Assets.xcassets */,
 				FCC349E92BB1182E00BED451 /* LaunchScreen.storyboard */,
+				FCD978CD2BB3119A00EE7DF8 /* dummy.json */,
 				FCC349EC2BB1182E00BED451 /* Info.plist */,
 				FCC349E42BB1182C00BED451 /* Test_Reyhan.xcdatamodeld */,
 			);
@@ -343,7 +397,8 @@
 		FCC349F42BB1182E00BED451 /* Test-ReyhanTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCC349F52BB1182E00BED451 /* Test_ReyhanTests.swift */,
+				FCD978BA2BB3012A00EE7DF8 /* CoreDataHelperTest.swift */,
+				FCD978C02BB3020A00EE7DF8 /* MockDataProvider.swift */,
 			);
 			path = "Test-ReyhanTests";
 			sourceTree = "<group>";
@@ -409,11 +464,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A052BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-Reyhan" */;
 			buildPhases = (
-				E04950AF6C04E2CB70FDC4EC /* [CP] Check Pods Manifest.lock */,
+				98712C4A6BE8C803000E041A /* [CP] Check Pods Manifest.lock */,
 				FCC349D42BB1182C00BED451 /* Sources */,
 				FCC349D52BB1182C00BED451 /* Frameworks */,
 				FCC349D62BB1182C00BED451 /* Resources */,
-				C89FF19D026FC910CBBEAA33 /* [CP] Embed Pods Frameworks */,
+				E7E1574A36CEB054E0F0744F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,7 +483,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A082BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanTests" */;
 			buildPhases = (
-				B52D3DF4FFB2ECA3C7B2A72B /* [CP] Check Pods Manifest.lock */,
+				DDA567FC675079EF1EACDEF7 /* [CP] Check Pods Manifest.lock */,
 				FCC349ED2BB1182E00BED451 /* Sources */,
 				FCC349EE2BB1182E00BED451 /* Frameworks */,
 				FCC349EF2BB1182E00BED451 /* Resources */,
@@ -447,11 +502,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A0B2BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanUITests" */;
 			buildPhases = (
-				BD6E90084ED031AC4987D92B /* [CP] Check Pods Manifest.lock */,
+				0BE494462A35BB3D8B893FE5 /* [CP] Check Pods Manifest.lock */,
 				FCC349F72BB1182E00BED451 /* Sources */,
 				FCC349F82BB1182E00BED451 /* Frameworks */,
 				FCC349F92BB1182E00BED451 /* Resources */,
-				04959F9493852DDF07A23DD0 /* [CP] Embed Pods Frameworks */,
+				04EF965F8B28104F2D9B4CCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCCB1F492BB1D20900BA3D97 /* GoogleService-Info.plist in Resources */,
+				FCD978CF2BB311D200EE7DF8 /* dummy.json in Resources */,
 				FCC349EB2BB1182E00BED451 /* LaunchScreen.storyboard in Resources */,
 				FCC349E82BB1182E00BED451 /* Assets.xcassets in Resources */,
 				FCC349E32BB1182C00BED451 /* Main.storyboard in Resources */,
@@ -522,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD978CE2BB311D100EE7DF8 /* dummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +592,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04959F9493852DDF07A23DD0 /* [CP] Embed Pods Frameworks */ = {
+		04EF965F8B28104F2D9B4CCF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -552,29 +609,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B52D3DF4FFB2ECA3C7B2A72B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Test-ReyhanTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD6E90084ED031AC4987D92B /* [CP] Check Pods Manifest.lock */ = {
+		0BE494462A35BB3D8B893FE5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -596,24 +631,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C89FF19D026FC910CBBEAA33 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E04950AF6C04E2CB70FDC4EC /* [CP] Check Pods Manifest.lock */ = {
+		98712C4A6BE8C803000E041A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -635,6 +653,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DDA567FC675079EF1EACDEF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-ReyhanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E1574A36CEB054E0F0744F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -647,6 +704,7 @@
 				FCC34A1C2BB1209600BED451 /* ScanQRInteractor.swift in Sources */,
 				FC4F70EA2BB1BCB100A60D65 /* PromoViewController.swift in Sources */,
 				FCC349E02BB1182C00BED451 /* HomeViewController.swift in Sources */,
+				FC64CBAA2BB41CFE005579F2 /* BaseViewController.swift in Sources */,
 				FCCB1F532BB1EC0200BA3D97 /* GradientView.swift in Sources */,
 				FCC34A0F2BB1186600BED451 /* TransitionManager.swift in Sources */,
 				FCCB1F4D2BB1E68A00BA3D97 /* PromoDetailViewController.swift in Sources */,
@@ -654,6 +712,7 @@
 				FC4F70FE2BB1CC2500A60D65 /* Dispatcher.swift in Sources */,
 				FC4F70F62BB1CB2400A60D65 /* PromoPresenter.swift in Sources */,
 				FC4F70FA2BB1CBF400A60D65 /* Operation.swift in Sources */,
+				FCA7F0542BB4627E00014001 /* SplashVC.swift in Sources */,
 				FCC34A182BB1207800BED451 /* ScanQRProtocol.swift in Sources */,
 				FCC34A112BB1189000BED451 /* PresentationHandler.swift in Sources */,
 				FCC34A302BB1375400BED451 /* HomeInteractor.swift in Sources */,
@@ -666,6 +725,7 @@
 				FCC34A1E2BB1209E00BED451 /* ScanQRRouter.swift in Sources */,
 				FCC34A3A2BB141B800BED451 /* Date+Extension.swift in Sources */,
 				FC4F70F82BB1CBE500A60D65 /* Request.swift in Sources */,
+				FC64CBAE2BB41E53005579F2 /* TabBarController.swift in Sources */,
 				FC4F70EC2BB1C57C00A60D65 /* PromoCollectionViewCell.swift in Sources */,
 				FCC34A222BB12BB400BED451 /* CustomError.swift in Sources */,
 				FCC34A362BB13CF800BED451 /* HomeRouter.swift in Sources */,
@@ -673,9 +733,11 @@
 				FC4F71042BB1CCFF00A60D65 /* PromoResponseModel.swift in Sources */,
 				FCC34A432BB16BB500BED451 /* TransactionModalVC.swift in Sources */,
 				FCC34A202BB128E900BED451 /* Collection+Extension.swift in Sources */,
+				FCD978DF2BB3256900EE7DF8 /* MockDataProvider.swift in Sources */,
 				FCC34A382BB13E4500BED451 /* TransactionTableViewCell.swift in Sources */,
 				FC4F71002BB1CC4300A60D65 /* PromoRequest.swift in Sources */,
 				FCC34A3C2BB14DF000BED451 /* UserManager.swift in Sources */,
+				FCD978DE2BB3254100EE7DF8 /* PromoMockPresenter.swift in Sources */,
 				FCDE61172BB1AB3200078E02 /* Double+Extension.swift in Sources */,
 				FCC349DC2BB1182C00BED451 /* AppDelegate.swift in Sources */,
 				FCC34A3E2BB14E5200BED451 /* User.swift in Sources */,
@@ -700,7 +762,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC349F62BB1182E00BED451 /* Test_ReyhanTests.swift in Sources */,
+				FCA91BB02BB2F11200EF6FCC /* ScanQRInteractor.swift in Sources */,
+				FC92F1CF2BB44F9A000F6FE0 /* TabBarController.swift in Sources */,
+				FCD978E02BB3258400EE7DF8 /* Promo.swift in Sources */,
+				FCD978C62BB303B700EE7DF8 /* Date+Extension.swift in Sources */,
+				FCD978C32BB3035D00EE7DF8 /* CustomError.swift in Sources */,
+				FCD978C82BB303BC00EE7DF8 /* NSManagedObject+Extension.swift in Sources */,
+				FC92F1CE2BB44F98000F6FE0 /* BaseViewController.swift in Sources */,
+				FCD978C22BB3034100EE7DF8 /* Collection+Extension.swift in Sources */,
+				FCD978C42BB303A500EE7DF8 /* DictionaryEncoder.swift in Sources */,
+				FCD978C52BB303A700EE7DF8 /* DictionaryDecoder.swift in Sources */,
+				FCA91BB32BB2F18D00EF6FCC /* ScanQRProtocol.swift in Sources */,
+				FCD978CC2BB30F1E00EE7DF8 /* AppDelegate.swift in Sources */,
+				FCD978BF2BB301D600EE7DF8 /* Transaction.swift in Sources */,
+				FC5DC0822BB2FF0A00CD60FD /* CoreDataManager.swift in Sources */,
+				FCD978C12BB3020A00EE7DF8 /* MockDataProvider.swift in Sources */,
+				FCD978BB2BB3012A00EE7DF8 /* CoreDataHelperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,8 +785,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD978E12BB3281C00EE7DF8 /* MockDataProvider.swift in Sources */,
+				FCD978D52BB321CB00EE7DF8 /* UIColor+Extension.swift in Sources */,
+				FCD978D22BB3216300EE7DF8 /* TransitionManager.swift in Sources */,
+				FCD978DC2BB3227B00EE7DF8 /* UIImageView+Extension.swift in Sources */,
+				FCE5BA262BB3DB8500B9418A /* ScanQRViewController.swift in Sources */,
+				FC92F1D02BB44F9B000F6FE0 /* TabBarController.swift in Sources */,
+				FCE5BA242BB3DB7D00B9418A /* ScanQRPresenter.swift in Sources */,
+				FCE5BA222BB3DB4B00B9418A /* ScanQRInteractor.swift in Sources */,
+				FCD978DA2BB3223100EE7DF8 /* Transaction.swift in Sources */,
+				FCD978D72BB321D300EE7DF8 /* Double+Extension.swift in Sources */,
+				FCE5BA232BB3DB7A00B9418A /* ScanQRProtocol.swift in Sources */,
+				FCE5BA252BB3DB8200B9418A /* ScanQRRouter.swift in Sources */,
+				FCD978E22BB3287F00EE7DF8 /* Promo.swift in Sources */,
+				FCD978D12BB3215B00EE7DF8 /* TransactionModalVC.swift in Sources */,
+				FC92F1CD2BB44F97000F6FE0 /* BaseViewController.swift in Sources */,
 				FCC34A002BB1182E00BED451 /* Test_ReyhanUITests.swift in Sources */,
+				FCE5BA272BB3DB9A00B9418A /* CustomError.swift in Sources */,
+				FCD978D32BB3218900EE7DF8 /* PresentationHandler.swift in Sources */,
+				FCD978D62BB321CF00EE7DF8 /* Date+Extension.swift in Sources */,
+				FCD978D42BB321A600EE7DF8 /* DismissalHandler.swift in Sources */,
 				FCC34A022BB1182E00BED451 /* Test_ReyhanUITestsLaunchTests.swift in Sources */,
+				FCD978D82BB321E100EE7DF8 /* Collection+Extension.swift in Sources */,
+				FCD978D92BB3222D00EE7DF8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,7 +967,7 @@
 		};
 		FCC34A062BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65EAF84CBC1FB3DAEAA42D10 /* Pods-Test-Reyhan.debug.xcconfig */;
+			baseConfigurationReference = 1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -899,7 +997,7 @@
 		};
 		FCC34A072BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B70D944CB45C93F95F5DBFB /* Pods-Test-Reyhan.release.xcconfig */;
+			baseConfigurationReference = 7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -929,13 +1027,14 @@
 		};
 		FCC34A092BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E872833C56D343708B8F8C6 /* Pods-Test-ReyhanTests.debug.xcconfig */;
+			baseConfigurationReference = 1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -950,13 +1049,14 @@
 		};
 		FCC34A0A2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6961623D6030AE16B9D355A /* Pods-Test-ReyhanTests.release.xcconfig */;
+			baseConfigurationReference = 2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -971,12 +1071,13 @@
 		};
 		FCC34A0C2BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C3E1B6D42A331807039658E /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */;
+			baseConfigurationReference = 48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Test-ReyhanUITests";
@@ -990,12 +1091,13 @@
 		};
 		FCC34A0D2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C2C331D5B02FF9A908965C5 /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */;
+			baseConfigurationReference = E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Test-ReyhanUITests";

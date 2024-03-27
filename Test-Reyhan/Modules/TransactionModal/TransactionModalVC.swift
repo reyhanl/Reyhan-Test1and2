@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TransactionModalVC: UIViewController, CustomTransitionEnabledVC{
+class TransactionModalVC: BaseViewController, CustomTransitionEnabledVC{
     
     lazy var backgroundView: UIView = {
         let view = UIView()
@@ -66,6 +66,7 @@ class TransactionModalVC: UIViewController, CustomTransitionEnabledVC{
         button.addTarget(self, action: #selector(purchase), for: .touchUpInside)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
+        button.accessibilityIdentifier = "purchaseButton"
         return button
     }()
     lazy var cancelButton: UIButton = {

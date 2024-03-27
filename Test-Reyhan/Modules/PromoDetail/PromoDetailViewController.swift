@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class PromoDetailViewController: UIViewController, CustomTransitionEnabledVC{
+class PromoDetailViewController: BaseViewController, CustomTransitionEnabledVC{
     
     lazy var webView: WKWebView = {
         let webView = WKWebView()
@@ -23,6 +23,7 @@ class PromoDetailViewController: UIViewController, CustomTransitionEnabledVC{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.accessibilityIdentifier = "PromoDetailViewController"
         addWebView()
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PromoViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, PromoPresenterToViewProtocol, UICollectionViewDelegateFlowLayout{
+class PromoViewController: BaseViewController,  UICollectionViewDataSource, UICollectionViewDelegate, PromoPresenterToViewProtocol, UICollectionViewDelegateFlowLayout{
     
     lazy var collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -18,6 +18,7 @@ class PromoViewController: UIViewController,  UICollectionViewDataSource, UIColl
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(PromoCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.accessibilityIdentifier = "collectionView"
         return collectionView
     }()
     
@@ -50,6 +51,7 @@ class PromoViewController: UIViewController,  UICollectionViewDataSource, UIColl
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PromoCollectionViewCell
+        cell.accessibilityIdentifier = "collectionViewCell\(indexPath.row)"
         cell.setupCell(promo: promos[indexPath.row])
         return cell
     }

@@ -6,8 +6,12 @@
 //
 
 import XCTest
+import Test_Reyhan
 
 final class Test_ReyhanUITests: XCTestCase {
+
+    var app: XCUIApplication?
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -15,27 +19,37 @@ final class Test_ReyhanUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        let app = XCUIApplication()
+        self.app = app
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.app = nil
     }
 
-    func testExample() throws {
+
+    func testInsufficientBalance() throws {
         // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        app?.launchArguments = ["TestTransactionModal", "InsufficientBalance"]
+        app?.launch()
+        
+        let button = app?.buttons.matching(identifier: "purchaseButton").element
+        if let button = button{
+            XCTAssert(button.isEnabled == false)
+        }else{
+            print("button is not found")
         }
+    }
+    
+    func testTransactionSuccess() throws {
+        // UI tests must launch the application that they test.
+        app?.launchArguments = ["TestTransactionSuccess", "InsufficientBalance"]
+        app?.launch()
+        
+        guard let button = app?.buttons["Purchase"] else{
+            XCTFail()
+            return
+        }
+        XCTAssert(button.isEnabled)
     }
 }

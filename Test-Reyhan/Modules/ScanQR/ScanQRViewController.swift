@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRPresenterToViewProtocol{
+class ScanQRViewController: BaseViewController, CustomTransitionEnabledVC, ScanQRPresenterToViewProtocol{
     
     var presenter: ScanQRViewToPresenterProtocol?
     var interactionController: UIPercentDrivenInteractiveTransition?
@@ -34,19 +34,42 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
     }
     
     deinit{
-        session.stopRunning()
+        DispatchQueue.global().async { [weak self] in
+            self?.session.stopRunning()
+        }
         delegate = nil
     }
-
+    
     // MARK: - set up camera
     func setupCamera() {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            self.startSession()
+        case .notDetermined: // The user has not yet been asked for camera access.
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    DispatchQueue.global().async { [weak self] in
+                        self?.startSession()
+                    }
+                }
+            }
+        case .denied, .restricted:
+            self.presentErrorAlert(title: "Permission needed", message: "You need to change the camera permission for this app to be enabled")
+            return
+        default:
+            break
+        }
+        
+    }
+    
+    func startSession(){
         guard let device = AVCaptureDevice.default(for: .video) else { return }
         
         do {
             let input = try AVCaptureDeviceInput(device: device)
             
             let output = AVCaptureMetadataOutput()
-
+            
             output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             
             session.addInput(input)
@@ -68,11 +91,30 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
         }
     }
     
+    func addButton(){
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: -50),
+            NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        ])
+        
+        button.addTarget(self, action: #selector(continueCamera), for: .touchUpInside)
+        button.backgroundColor = .lightGray
+    }
+    
     func presentErrorAlert(title: String, message: String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "OK", style: .destructive) { [weak self] alert in
             self?.shouldStopScanning = false
-            self?.session.startRunning()
+            DispatchQueue.global().async { [weak self] in
+                self?.session.startRunning()
+            }
         }
         alertController.addAction(action)
         self.present(alertController, animated: true)
@@ -97,6 +139,12 @@ class ScanQRViewController: UIViewController, CustomTransitionEnabledVC, ScanQRP
         switch type {
         case .decodeQR(let transaction):
             self.delegate?.successfullyScanQR(transaction: transaction)
+        }
+    }
+    
+    @objc func continueCamera(){
+        DispatchQueue.global().async { [weak self] in
+            self?.session.startRunning()
         }
     }
 }
@@ -133,31 +181,29 @@ extension ScanQRViewController{
             break
         }
     }
-
+    
 }
 
 //MARK: QRCode handler
 extension ScanQRViewController: AVCaptureMetadataOutputObjectsDelegate {
-
+    
     func metadataOutput(_ output: AVCaptureMetadataOutput,
                         didOutput metadataObjects: [AVMetadataObject],
                         from connection: AVCaptureConnection) {
-
+        
         guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
-                  metadataObject.type == .qr,
-                  let stringValue = metadataObject.stringValue else { return }
+              metadataObject.type == .qr,
+              let stringValue = metadataObject.stringValue else { return }
         guard !shouldStopScanning else{return}
         shouldStopScanning = true
         print("metadataOutput")
-        session.stopRunning()
-        DispatchQueue.main.async {
-            self.presenter?.userDidScanQR(qrString: stringValue)
+        DispatchQueue.global().async { [weak self] in
+            self?.session.stopRunning()
+            DispatchQueue.main.async {
+                self?.presenter?.userDidScanQR(qrString: stringValue)
+            }
         }
     }
-}
-
-enum ScanQRSuccessType{
-    case decodeQR(Transaction)
 }
 
 protocol ScanQRDelegate{

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePresenterToViewProtocol {
+class HomeViewController: BaseViewController, CustomTransitionEnabledVC, HomePresenterToViewProtocol {
     
     lazy var noTransactionView: UIImageView = {
         let view = UIImageView()
@@ -27,6 +27,8 @@ class HomeViewController: UIViewController, CustomTransitionEnabledVC, HomePrese
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = false
+        tableView.accessibilityIdentifier = "tableView"
         return tableView
     }()
     lazy var topUpButton: UIButton = {
@@ -182,10 +184,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if transactions.count == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "noDataCell", for: indexPath) as! NoDataTableViewCell
+            tableView.accessibilityIdentifier = "noDataCell"
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TransactionTableViewCell
             cell.setupCell(transaction: transactions[indexPath.row])
+            tableView.accessibilityIdentifier = "transactionTableViewCell\(indexPath.row)"
             return cell
         }
     }

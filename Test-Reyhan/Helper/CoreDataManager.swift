@@ -35,6 +35,11 @@ class CoreDataStack {
     private func assignContainer(){
         guard let name = modelContainerName else{return}
         let container = NSPersistentContainer(name: name)
+        if let description = UserDefaults.standard.string(forKey: "testing"){
+            let description = NSPersistentStoreDescription()
+            description.type = NSInMemoryStoreType
+            container.persistentStoreDescriptions = [description]
+        }
         if let description = description{
             container.persistentStoreDescriptions = description
         }
@@ -49,7 +54,7 @@ class CoreDataStack {
     private func assignContext(){
         self.context = persistentContainer?.viewContext
     }
-        
+    
 }
 
 class CoreDataHelper: CoreDataHelperProtocol {
@@ -64,7 +69,7 @@ class CoreDataHelper: CoreDataHelperProtocol {
     func saveNewData<T: Encodable>(entity name: EntityName, object: T) throws{
         guard let context = stack?.context
         else{
-            throw CustomError.somethingWentWrong
+            throw CustomError.contextIsNotDefinedCoreDataStack
         }
         let entity = NSEntityDescription.entity(forEntityName: name.rawValue, in: context)
         let newUser = NSManagedObject(entity: entity!, insertInto: context)
@@ -103,7 +108,7 @@ class CoreDataHelper: CoreDataHelperProtocol {
     
     func fetchItems(entity name: EntityName, with predicate: NSPredicate?) throws -> [NSManagedObject] {
         guard let context = stack?.context else{
-            return []
+            throw CustomError.contextIsNotDefinedCoreDataStack
         }
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: name.rawValue)
         if let predicate = predicate{
@@ -122,7 +127,7 @@ class CoreDataHelper: CoreDataHelperProtocol {
     
     func fetchItemsToGeneric<T: Codable>(entity name: EntityName, with predicate: NSPredicate?) throws -> [T] {
         guard let context = stack?.context else{
-            throw CustomError.somethingWentWrong
+            throw CustomError.contextIsNotDefinedCoreDataStack
         }
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: name.rawValue)
         if let predicate = predicate{
@@ -149,12 +154,12 @@ class CoreDataHelper: CoreDataHelperProtocol {
     func deleteRecords(entity name: EntityName, with predicate: NSPredicate) throws {
         guard let context = stack?.context
         else{
-            throw CustomError.somethingWentWrong
+            throw CustomError.contextIsNotDefinedCoreDataStack
         }
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: name.rawValue)
         deleteFetch.predicate = predicate
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-
+        
         do {
             try context.execute(deleteRequest)
             try context.save()
@@ -165,11 +170,11 @@ class CoreDataHelper: CoreDataHelperProtocol {
     func deleteAllRecords(entity name: EntityName) throws{
         guard let context = stack?.context
         else{
-            throw CustomError.somethingWentWrong
+            throw CustomError.contextIsNotDefinedCoreDataStack
         }
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: name.rawValue)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-
+        
         do {
             try context.execute(deleteRequest)
             try context.save()

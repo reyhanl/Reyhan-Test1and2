@@ -7,16 +7,20 @@
 
 import Foundation
 
-enum CustomError: String, Error{
+enum CustomError: Error{
     case unableToScanQRCode
     case somethingWentWrong
     case userNotFound
     case insufficientBalance
+    case contextIsNotDefinedCoreDataStack
+    case custom(String)
 }
 
 extension CustomError: LocalizedError {
     public var errorDescription: String? {
         switch self {
+        case .custom(let errorMessage):
+            return NSLocalizedString(errorMessage, comment: errorMessage)
         case .unableToScanQRCode:
             return NSLocalizedString("QR is not in the right format", comment: "The QR code scanned is not in the right format")
         case .insufficientBalance:

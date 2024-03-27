@@ -33,3 +33,7 @@ protocol ScanQRInteractorToPresenterProtocol{
 
 protocol ScanQRPresenterToRouterProtocol{
 }
+
+enum ScanQRSuccessType{
+    case decodeQR(Transaction)
+}

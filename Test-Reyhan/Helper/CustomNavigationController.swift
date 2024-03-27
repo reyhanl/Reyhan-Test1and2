@@ -21,6 +21,7 @@ class CustomNavigationController: UINavigationController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .dark
         UINavigationBar.appearance().tintColor = .primaryForegroundColor
         UIBarButtonItem.appearance().tintColor = .primaryForegroundColor
     }
