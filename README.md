@@ -11,7 +11,7 @@ The second test (promo) is on the second tab bar child controller.
 
 ## Instalation Guide
 ```
-git clone https://github.com/reyhanl/StockPhoto.git
+git clone https://github.com/reyhanl/Reyhan-Test1and2.git
 ```
 1. Clone this repository
 
