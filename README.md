@@ -1,6 +1,8 @@
 # BNI Test 1 & 2
 ![Group 4413](https://github.com/reyhanl/Reyhan-Test1and2/assets/50016541/ec396fcb-44b4-4b21-9bf8-b3ce44c64cab)
 
+## How To Use
+https://docs.google.com/document/d/1IOZj20X2VQu6O0Ou7ISaaidLAi4daxWjSIGM7Ge2od8/
 
 ## Overview
 I used the same project to handle the first and second task because there are a lot of thing that can be reused in UI and other aspect of the app.
