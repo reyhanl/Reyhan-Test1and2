@@ -5,7 +5,7 @@
 //  Created by reyhan muhammad on 25/03/24.
 //
 
-import Foundation
+import Combine
 
 protocol Operation {
     associatedtype T: Codable
@@ -17,6 +17,6 @@ protocol Operation {
     ///
     /// - Parameter dispatcher: dispatcher
     /// - Returns: a promise
-    func execute(in dispatcher: Dispatcher, completion: @escaping(Result<T, Error>) -> Void)
+    func execute<T: Decodable>(in dispatcher: Dispatcher) -> AnyPublisher<T, Error>
     
 }

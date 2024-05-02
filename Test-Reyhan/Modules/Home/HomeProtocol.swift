@@ -17,6 +17,7 @@ protocol HomeViewToPresenterProtocol{
     func goToQRVC(from: HomeViewController, usingInteraction: Bool)
     func topUp()
     func goToTransactionVC(from: HomeViewController, transaction: Transaction, user: User)
+    func numberOfRows() -> Int
 }
 
 protocol HomePresenterToViewProtocol{

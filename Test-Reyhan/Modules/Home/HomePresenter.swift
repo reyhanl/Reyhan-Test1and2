@@ -11,6 +11,7 @@ class HomePresenter: HomeInteractorToPresenterProtocol{
     var interactor: HomePresenterToInteractorProtocol?
     var view: HomePresenterToViewProtocol?
     var router: HomePresenterToRouterProtocol?
+    var transactions: [Transaction] = []
     
     func result(result: Result<HomeSuccessType, Error>) {
         switch result{
@@ -44,6 +45,10 @@ class HomePresenter: HomeInteractorToPresenterProtocol{
 extension HomePresenter: HomeViewToPresenterProtocol{
     func updateTransactions() {
         interactor?.fetchListOfTransaction()
+    }
+    
+    func numberOfRows() -> Int {
+        return transactions.count
     }
     
     func userDidTransaction(transaction: Transaction) {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: BaseViewController, CustomTransitionEnabledVC, HomePresenterToViewProtocol {
     
@@ -29,6 +30,7 @@ class HomeViewController: BaseViewController, CustomTransitionEnabledVC, HomePre
         tableView.delegate = self
         tableView.allowsSelection = false
         tableView.accessibilityIdentifier = "tableView"
+        
         return tableView
     }()
     lazy var topUpButton: UIButton = {
@@ -182,7 +184,7 @@ extension HomeViewController: ScanQRDelegate{
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if transactions.count == 0{
+        if presenter?.numberOfRows() == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "noDataCell", for: indexPath) as! NoDataTableViewCell
             tableView.accessibilityIdentifier = "noDataCell"
             return cell
@@ -195,11 +197,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (transactions.count == 0) ? tableView.frame.height:UITableView.automaticDimension
+        return (presenter?.numberOfRows() == 0) ? tableView.frame.height:UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transactions.count == 0 ? 1:transactions.count
+        guard let presenter = presenter else{return 0}
+        return presenter.numberOfRows() == 0 ? 1:presenter.numberOfRows()
     }
 }
 
@@ -210,4 +213,8 @@ extension HomeViewController: TransactionModalDelegate{
             self.presenter?.userDidTransaction(transaction: transaction)
         }
     }
+}
+
+extension Notification.Name{
+    static let newTransaction = Notification.Name("newTransaction")
 }

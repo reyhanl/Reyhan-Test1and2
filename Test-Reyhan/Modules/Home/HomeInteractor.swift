@@ -9,7 +9,7 @@ import Foundation
 
 class HomeInteractor: HomePresenterToInteractorProtocol{
     var presenter: HomeInteractorToPresenterProtocol?
-    
+        
     func userDidTransaction(transaction: Transaction) {
         let stack = CoreDataStack(name: .main)
         let helper = CoreDataHelper(coreDataStack: stack)

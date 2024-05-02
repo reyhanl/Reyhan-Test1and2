@@ -5,26 +5,28 @@
 //  Created by reyhan muhammad on 25/03/24.
 //
 
-import Foundation
+import Combine
 
 protocol PromoViewToPresenterProtocol{
     var view: PromoPresenterToViewProtocol?{get set}
     var router: PromoPresenterToRouterProtocol?{get set}
     
     func viewDidLoad()
-    func openPromoDetail(from: PromoViewController, promo: Promo)
+    func numberOfRows() -> Int
+    func promoForCell(index: Int) -> Promo
+    func openPromoDetail(from: PromoViewController, index: Int)
 }
 
 protocol PromoPresenterToViewProtocol{
     var presenter: PromoViewToPresenterProtocol?{get set}
     
-    func updatePromos(promos: [Promo])
+    func updatePromos()
 }
 
 protocol PromoPresenterToInteractorProtocol{
     var presenter: PromoInteractorToPresenterProtocol?{get set}
     
-    func fetchPromos()
+    func fetchPromos() -> AnyPublisher<[Promo], Error>
 }
 
 protocol PromoInteractorToPresenterProtocol{

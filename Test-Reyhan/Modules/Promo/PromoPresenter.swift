@@ -5,21 +5,43 @@
 //  Created by reyhan muhammad on 25/03/24.
 //
 
-import Foundation
+import Combine
 
 class PromoPresenter: PromoViewToPresenterProtocol{
     
     var view: PromoPresenterToViewProtocol?
     var interactor: PromoPresenterToInteractorProtocol?
     var router: PromoPresenterToRouterProtocol?
+    private var cancellables = Set<AnyCancellable>()
+
+    @Published var promos: [Promo] = []
     
     func viewDidLoad() {
-        interactor?.fetchPromos()
+        interactor?.fetchPromos().sink(receiveCompletion: { result in
+            switch result {
+            case .finished:
+                break
+            case .failure(let failure):
+                print("failure: \(failure.localizedDescription)")
+            }
+        }, receiveValue: { [weak self] promos in
+            self?.promos = promos
+            self?.view?.updatePromos()
+        }).store(in: &cancellables)
     }
     
-    func openPromoDetail(from: PromoViewController, promo: Promo) {
-        router?.openPromoDetail(from: from, promo: promo)
+    func openPromoDetail(from: PromoViewController, index: Int) {
+        router?.openPromoDetail(from: from, promo: promos[index])
     }
+
+    func numberOfRows() -> Int {
+        return promos.count
+    }
+    
+    func promoForCell(index: Int) -> Promo {
+        return promos[index]
+    }
+    
 }
 
 extension PromoPresenter: PromoInteractorToPresenterProtocol{
@@ -36,7 +58,7 @@ extension PromoPresenter: PromoInteractorToPresenterProtocol{
     func handleSuccess(type: PromoSuccessType){
         switch type{
         case .fetchPromoSuccess(let promos):
-            view?.updatePromos(promos: promos)
+            view?.updatePromos()
         }
     }
 }

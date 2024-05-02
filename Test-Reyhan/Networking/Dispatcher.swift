@@ -6,13 +6,13 @@
 //
 
 import Foundation
-
+import Combine
 
 protocol DispatcherProtocol{
     
     init(environment: Environment)
     
-    func execute(request: RequestProtocol, completion: @escaping(Result<Data, Error>) -> Void)
+    func execute<T: Decodable>(request: RequestProtocol) -> AnyPublisher<T, Error>
 }
 
 class Dispatcher: DispatcherProtocol{
@@ -23,32 +23,15 @@ class Dispatcher: DispatcherProtocol{
         self.environment = environment
     }
     
-    func execute(request: RequestProtocol, completion: @escaping(Result<Data, Error>) -> Void) {
+    func execute<T: Decodable>(request: RequestProtocol) -> AnyPublisher<T, Error> {
         //TODO: Should return a struct with a data or Codable
         do{
             let req = try makeRequest(request: request)
             print("url: \(req.url?.absoluteString ?? "")")
-            URLSession.shared.dataTask(with: req, completionHandler: { data, response, error in
-                if let error = error{
-                    print("err: \(error.localizedDescription)")
-                    completion(.failure(error))
-                    return
-                }
-                guard let data = data else{
-                    completion(.failure(CustomError.somethingWentWrong))
-                    return
-                }
-                
-                print("response: \(response)")
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode < 300 && httpResponse.statusCode >= 200 else{
-                    completion(.failure(CustomError.somethingWentWrong))
-                    return
-                }
-                print(response as? HTTPURLResponse)
-                completion(.success(data))
-            }).resume()
+            return URLSession.shared.dataTaskPublisher(for: req).tryMap(\.data).decode(type: T.self, decoder: JSONDecoder()).eraseToAnyPublisher()
         }catch{
-            
+            return Fail(error: NSError(domain: "Server Error", code: 0))
+                .eraseToAnyPublisher()
         }
     }
     
