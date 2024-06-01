@@ -1,6 +1,0 @@
-framework module Pods_Test_Reyhan {
-  umbrella header "Pods-Test-Reyhan-umbrella.h"
-
-  export *
-  module * { export * }
-}

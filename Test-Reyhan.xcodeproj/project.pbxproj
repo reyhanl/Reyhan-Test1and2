@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04D381F0E93F4FECB81E3425 /* Pods_Test_ReyhanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */; };
-		91C25700E4747FD00624FCF1 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */; };
-		A25FDE7E7FA17D335B5F8337 /* Pods_Test_Reyhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */; };
 		FC4F70E72BB1AF5800A60D65 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */; };
 		FC4F70EA2BB1BCB100A60D65 /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */; };
 		FC4F70EC2BB1C57C00A60D65 /* PromoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */; };
@@ -131,15 +128,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.debug.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.debug.xcconfig"; sourceTree = "<group>"; };
-		2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-ReyhanTests.release.xcconfig"; path = "Target Support Files/Pods-Test-ReyhanTests/Pods-Test-ReyhanTests.release.xcconfig"; sourceTree = "<group>"; };
-		48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan.release.xcconfig"; sourceTree = "<group>"; };
-		78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan_Test_ReyhanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_ReyhanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; path = "Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Reyhan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4F70E62BB1AF5800A60D65 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
 		FC4F70E92BB1BCB100A60D65 /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		FC4F70EB2BB1C57C00A60D65 /* PromoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -215,7 +203,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25FDE7E7FA17D335B5F8337 /* Pods_Test_Reyhan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +210,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D381F0E93F4FECB81E3425 /* Pods_Test_ReyhanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +217,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C25700E4747FD00624FCF1 /* Pods_Test_Reyhan_Test_ReyhanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,24 +226,8 @@
 		0E45E4712ED5DF665D6B57C3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */,
-				7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */,
-				48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */,
-				E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */,
-				1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */,
-				2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		6C58867FD1FAD2AF115DCBBE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F4B4780C0E03CC0D01DA51B0 /* Pods_Test_Reyhan.framework */,
-				78F0CC914947E2E495BE4D0D /* Pods_Test_Reyhan_Test_ReyhanUITests.framework */,
-				83BF48D31B5C8B73A5E14734 /* Pods_Test_ReyhanTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FC4F70E02BB1AE7D00A60D65 /* Extension */ = {
@@ -356,7 +325,6 @@
 				FCC349FE2BB1182E00BED451 /* Test-ReyhanUITests */,
 				FCC349D92BB1182C00BED451 /* Products */,
 				0E45E4712ED5DF665D6B57C3 /* Pods */,
-				6C58867FD1FAD2AF115DCBBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -464,11 +432,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A052BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-Reyhan" */;
 			buildPhases = (
-				98712C4A6BE8C803000E041A /* [CP] Check Pods Manifest.lock */,
 				FCC349D42BB1182C00BED451 /* Sources */,
 				FCC349D52BB1182C00BED451 /* Frameworks */,
 				FCC349D62BB1182C00BED451 /* Resources */,
-				E7E1574A36CEB054E0F0744F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,7 +449,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A082BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanTests" */;
 			buildPhases = (
-				DDA567FC675079EF1EACDEF7 /* [CP] Check Pods Manifest.lock */,
 				FCC349ED2BB1182E00BED451 /* Sources */,
 				FCC349EE2BB1182E00BED451 /* Frameworks */,
 				FCC349EF2BB1182E00BED451 /* Resources */,
@@ -502,11 +467,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCC34A0B2BB1182E00BED451 /* Build configuration list for PBXNativeTarget "Test-ReyhanUITests" */;
 			buildPhases = (
-				0BE494462A35BB3D8B893FE5 /* [CP] Check Pods Manifest.lock */,
 				FCC349F72BB1182E00BED451 /* Sources */,
 				FCC349F82BB1182E00BED451 /* Frameworks */,
 				FCC349F92BB1182E00BED451 /* Resources */,
-				04EF965F8B28104F2D9B4CCF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -590,109 +553,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		04EF965F8B28104F2D9B4CCF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan-Test-ReyhanUITests/Pods-Test-Reyhan-Test-ReyhanUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0BE494462A35BB3D8B893FE5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Test-Reyhan-Test-ReyhanUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98712C4A6BE8C803000E041A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Test-Reyhan-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DDA567FC675079EF1EACDEF7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Test-ReyhanTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7E1574A36CEB054E0F0744F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test-Reyhan/Pods-Test-Reyhan-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCC349D42BB1182C00BED451 /* Sources */ = {
@@ -967,7 +827,6 @@
 		};
 		FCC34A062BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F90CACF078EE28E1A855935 /* Pods-Test-Reyhan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -997,7 +856,6 @@
 		};
 		FCC34A072BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7828E6512AD216E374C7101E /* Pods-Test-Reyhan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1027,7 +885,6 @@
 		};
 		FCC34A092BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0878D817C93C39ED01F918 /* Pods-Test-ReyhanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1049,7 +906,6 @@
 		};
 		FCC34A0A2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E5AA46FBCE2A88D2DB2FA7B /* Pods-Test-ReyhanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1071,7 +927,6 @@
 		};
 		FCC34A0C2BB1182E00BED451 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48EEC2FE910B5DD342E382CC /* Pods-Test-Reyhan-Test-ReyhanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1091,7 +946,6 @@
 		};
 		FCC34A0D2BB1182E00BED451 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E91D951A754CADB3CCE9C73D /* Pods-Test-Reyhan-Test-ReyhanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
